@@ -1,0 +1,4 @@
+dist
+src/js/jquery*.js
+src/js/modernizr*.js
+src/js/plugins.js

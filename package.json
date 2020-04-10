@@ -1,0 +1,49 @@
+{
+  "name": "pixelattack-boilerplate",
+  "version": "1.0.0",
+  "description": "A personal small scale boilerplate for Pixelattack projects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --prod"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Konstantinos Antoniadis",
+    "email": "hello@pixelattack.gr",
+    "url": "https://www.pixelattack.gr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apsuhos/pixelattack-boilerplate.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-terser": "^1.2.0",
+    "yargs": "^15.3.1"
+  },
+  "dependencies": {
+    "inuitcss": "^6.0.0"
+  }
+}
