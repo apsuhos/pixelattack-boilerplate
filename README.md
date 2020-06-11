@@ -25,9 +25,16 @@ Project
     ├── scss/
     │   ├── components/
     │   │   └── _components.buttons.scss
+    │   ├── core/
+    │   │   └── _core_.colors.scss
+    │   │   └── _core_.typographt.scss
     │   ├── settings/
     │   │   ├──_settings.config.scss
     │   │   └──_settings.global.scss
+    │   ├── utilities/
+    │   │   └──_utilities.display.scss
+    │   │   └──_utilities.headings.scss
+    │   │   └──_utilities.text-align.scss
     │   └── main.scss
     ├── js
     │   ├── jquery-3.4.1.min.js
