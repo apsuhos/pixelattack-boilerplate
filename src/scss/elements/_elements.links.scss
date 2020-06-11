@@ -1,0 +1,17 @@
+// ELEMENT LINKS
+
+a {
+  color: var(--primary-60);
+}
+
+a:focus {
+  outline-width: $global-outline-width;
+  outline-style: $global-outline-style;
+  outline-offset: $global-focus-offset;
+  outline-color: var(--primary-60);
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
