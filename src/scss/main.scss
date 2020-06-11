@@ -65,6 +65,8 @@ $inuit-wrapper-width: 1860px;
 @import "objects/objects.table";
 @import "objects/objects.pack";
 @import "objects/objects.grid";
+$inuit-row-breakpoint: desktop;
+@import "objects.row";
 
 // COMPONENTS
 @import "components/components.container";

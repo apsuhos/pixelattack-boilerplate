@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "inuit-flexgrid": "^0.4.0",
-    "inuitcss": "^6.0.0"
+    "inuitcss": "^6.0.0",
+    "inuitcss-plugin-row": "^1.0.2"
   }
 }

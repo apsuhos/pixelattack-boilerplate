@@ -87,7 +87,8 @@ const cssConfig = {
     includePaths: [
       'node_modules/sass-mq/',
       'node_modules/inuitcss/',
-      'node_modules/inuit-flexgrid/'
+      'node_modules/inuit-flexgrid/',
+      'node_modules/inuitcss-plugin-row'
     ]
   },
   postCSS: [
