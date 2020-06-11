@@ -12,6 +12,7 @@ $ npm install
 
 ```
 Project
+├── assets
 ├── README.md
 ├── node_modules
 ├── package.json
@@ -52,16 +53,17 @@ $ npm run build
 
 ## TODOS
 
-* jQuery
-* Modernizr
-* Template engine
-* Terser options
-* Head of html document
-* Critical css
-* inuitcss plugins extensions
-* Favicon generator + `.psd`
-* Front end checklist
-* Responsive images
-* JSON-LD
+- jQuery
+- Modernizr
+- Template engine
+- Terser options
+- Head of html document
+- Critical css
+- inuitcss plugins extensions
+- Favicon generator + `.psd`
+- Front end checklist
+- Responsive images
+- JSON-LD
+- Remove purgeCSS and add uncss because of some conflicts with the inuit library
 
 Have fun!
