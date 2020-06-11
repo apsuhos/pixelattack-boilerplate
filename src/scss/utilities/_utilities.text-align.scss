@@ -1,0 +1,32 @@
+//  ================================================================================
+//  Utilities > Text align
+//  ================================================================================
+
+$text-align-direction: true !default;
+
+// Direction
+
+$text-align-direction-values: (center, left, right) !default;
+
+@mixin text-align-direction($text-align-direction-values, $breakpoint: null) {
+  @each $text-align-direction-value in $text-align-direction-values {
+    $rule: ".u-text-align-#{$text-align-direction-value}#{$breakpoint}";
+    #{$rule} {
+      text-align: $text-align-direction-value;
+    }
+  }
+}
+
+@if $text-align-direction == true {
+  @include text-align-direction($text-align-direction-values);
+  @if (variable-exists(mq-breakpoints)) {
+    @each $bp-name, $bp-value in $mq-breakpoints {
+      @include mq($from: $bp-name) {
+        @include text-align-direction(
+          $text-align-direction-values,
+          \@#{$bp-name}
+        );
+      }
+    }
+  }
+}
