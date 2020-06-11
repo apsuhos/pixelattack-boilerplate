@@ -7,5 +7,13 @@
 
 // Standardise some UI treatments.
 
-$global-radius: 3px !default;
-$global-transition: all 300ms ease-in-out !default;
+$global-radius: 6px !default;
+$global-line-width: 3px !default;
+
+$global-transition-timing: 150ms !default;
+$global-transition-function: ease-in-out !default;
+$global-transition: $global-transition-timing $global-transition-function !default;
+
+$global-outline-width: $global-line-width !default;
+$global-outline-style: solid !default;
+$global-focus-offset: 3px !default;
