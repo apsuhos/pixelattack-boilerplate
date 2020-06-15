@@ -27,6 +27,9 @@ body {
     font-family: $font-base;
   }
   font-size: $inuit-global-font-size;
+  @if $inuit-fluid-font-size == true {
+    @include inuit-fluid-font-size($inuit-global-font-size);
+  }
   font-weight: 400;
   background-color: var(--primary-100);
   color: var(--primary-90);

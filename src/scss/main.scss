@@ -11,9 +11,6 @@ $inuit-global-font-size: 16px;
 @import "settings/settings.global";
 
 // TOOLS
-@import "tools/tools.font-size";
-@import "tools/tools.clearfix";
-@import "tools/tools.hidden";
 $mq-breakpoints: (
   mobile: 320px,
   tablet: 740px,
@@ -22,6 +19,17 @@ $mq-breakpoints: (
 );
 $mq-show-breakpoints: (mobile, tablet, desktop, wide);
 @import "mq";
+
+$inuit-fluid-font-size: true;
+$inuit-fluid-font-size-scale-rate: 0.85;
+$inuit-fluid-font-size-max-boundaries: true;
+$inuit-fluid-font-size-breakpoint: map-get($mq-breakpoints, wide); // 980px
+$global-typography-breakpoint: $inuit-fluid-font-size-breakpoint;
+
+@import "tools/tools.fluid-font-size";
+@import "tools/tools.font-size";
+@import "tools/tools.clearfix";
+@import "tools/tools.hidden";
 
 // GENERIC
 @import "generic/generic.box-sizing";
@@ -55,18 +63,16 @@ $inuit-wrapper-width: 1860px;
 @import "objects/objects.wrapper";
 @import "objects/objects.layout";
 @import "objects/objects.media";
-@import "objects/objects.flag";
+// @import "objects/objects.flag";
 @import "objects/objects.list-bare";
 @import "objects/objects.list-inline";
-@import "objects/objects.box";
+// @import "objects/objects.box";
 @import "objects/objects.block";
 @import "objects/objects.ratio";
 @import "objects/objects.crop";
 @import "objects/objects.table";
 @import "objects/objects.pack";
-@import "objects/objects.grid";
-$inuit-row-breakpoint: desktop;
-@import "objects.row";
+@import "objects/objects.row";
 
 // COMPONENTS
 @import "components/components.container";
