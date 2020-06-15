@@ -23,3 +23,29 @@
 .u-h6 {
   @include inuit-font-size($inuit-font-size-h6);
 }
+
+@if $inuit-fluid-font-size == true {
+  .u-h1 {
+    @include inuit-fluid-font-size($inuit-font-size-h1);
+  }
+
+  .u-h2 {
+    @include inuit-fluid-font-size($inuit-font-size-h2);
+  }
+
+  .u-h3 {
+    @include inuit-fluid-font-size($inuit-font-size-h3);
+  }
+
+  .u-h4 {
+    @include inuit-fluid-font-size($inuit-font-size-h4);
+  }
+
+  .u-h5 {
+    @include inuit-fluid-font-size($inuit-font-size-h5);
+  }
+
+  .u-h6 {
+    @include inuit-fluid-font-size($inuit-font-size-h6);
+  }
+}
