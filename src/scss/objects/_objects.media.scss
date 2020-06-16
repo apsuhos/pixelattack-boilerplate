@@ -2,17 +2,6 @@
    #MEDIA
    ========================================================================== */
 
-//  $inuit-media-spacing:       inuit-spacing(base) !default;
-//  $inuit-media-tiny-spacing:  inuit-spacing(tiny) !default;
-//  $inuit-media-small-spacing: inuit-spacing(small) !default;
-//  $inuit-media-large-spacing: inuit-spacing(large) !default;
-//  $inuit-media-huge-spacing:  inuit-spacing(huge) !default;
-
-/**
-    * Place any image- and text-like content side-by-side, as per:
-    * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
-    */
-
 .o-media {
   display: flex;
 }
@@ -21,13 +10,8 @@
   margin-right: $inuit-global-spacing-unit;
 }
 
-/**
-      * 1. Explicitly use percentage unit to provide IE support.
-      *    https://github.com/philipwalton/flexbugs/blob/6e720da852c3d566a84f3d82eb500e6f53f0a326/README.md#flexbug-4
-      */
-
 .o-media__body {
-  flex: 1 1 0%; /* [1] */
+  flex: 1 1 0%;
 
   &,
   > :last-child {
@@ -35,8 +19,8 @@
   }
 }
 
-/* Vertical alignment modifiers.
-      ========================================================================== */
+/* Vertical alignment modifiers
+   ========================================================================== */
 
 .o-media--middle {
   align-items: center;
@@ -47,12 +31,7 @@
 }
 
 /* Size variants
-      ========================================================================== */
-
-/**
-    * Modify the amount of space between our image and our text. We also have
-    * reversible options for all available sizes.
-    */
+   ========================================================================== */
 
 .o-media--flush {
   > .o-media__img {
@@ -114,7 +93,7 @@
 }
 
 /* Reversed media objects
-      ========================================================================== */
+   ========================================================================== */
 
 .o-media--reverse {
   > .o-media__img {

@@ -25,7 +25,6 @@ $inuit-fluid-font-size-scale-rate: 0.85;
 $inuit-fluid-font-size-max-boundaries: true;
 $inuit-fluid-font-size-breakpoint: map-get($mq-breakpoints, wide); // 980px
 $global-typography-breakpoint: $inuit-fluid-font-size-breakpoint;
-
 @import "tools/tools.fluid-font-size";
 @import "tools/tools.font-size";
 @import "tools/tools.clearfix";
@@ -72,6 +71,7 @@ $inuit-wrapper-width: 1860px;
 @import "objects/objects.crop";
 @import "objects/objects.table";
 @import "objects/objects.pack";
+$inuit-row-breakpoint: map-get($mq-breakpoints, wide); // 980
 @import "objects/objects.row";
 
 // COMPONENTS
@@ -93,5 +93,6 @@ $inuit-responsive-spacing-sizes: $inuit-spacing-sizes !default;
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
 @import "utilities/utilities.headings";
+$text-align-direction: true;
 @import "utilities/utilities.text-align";
 @import "utilities/utilities.display";
