@@ -71,6 +71,5 @@ $ npm run build
 - Front end checklist
 - Responsive images
 - JSON-LD
-- Remove purgeCSS and add uncss because of some conflicts with the inuit library
 
 Have fun!
