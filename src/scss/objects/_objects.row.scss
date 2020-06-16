@@ -2,20 +2,7 @@
    #ROW
    ========================================================================== */
 
-/**
- * Creates even spaced responsive rows using the default InuitCSS spacing variables.
- *
- *   <div class="o-row">
- *     <div class="o-wrapper">
- *     </div>
- *   </div>
- *
- */
-
-$inuit-row-breakpoint: desktop !default;
-
-/* Default classes.
-    ========================================================================== */
+$inuit-row-breakpoint: map-get($mq-breakpoints, wide) !default;
 
 .o-row {
   padding-top: $inuit-global-spacing-unit;

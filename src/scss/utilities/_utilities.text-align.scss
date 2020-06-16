@@ -1,16 +1,13 @@
-//  ================================================================================
-//  Utilities > Text align
-//  ================================================================================
+/* ==========================================================================
+   #TEXT ALIGN
+   ========================================================================== */
 
 $text-align-direction: true !default;
-
-// Direction
-
 $text-align-direction-values: (center, left, right) !default;
 
 @mixin text-align-direction($text-align-direction-values, $breakpoint: null) {
   @each $text-align-direction-value in $text-align-direction-values {
-    $rule: ".u-text-align-#{$text-align-direction-value}#{$breakpoint}";
+    $rule: ".u-ta-#{$text-align-direction-value}#{$breakpoint}";
     #{$rule} {
       text-align: $text-align-direction-value;
     }
