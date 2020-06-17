@@ -8,7 +8,6 @@
 $fluid-font-size: false !default;
 
 $inuit-fluid-font-size-breakpoint: map-get($mq-breakpoints, wide) !default;
-$global-typography-breakpoint: 1200px !default;
 $global-typography-breakpoint: $inuit-fluid-font-size-breakpoint !default;
 
 // Set the rate at which font sizes scale both up and down depending on
