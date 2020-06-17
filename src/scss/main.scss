@@ -19,8 +19,8 @@
 @import "generic/generic.shared";
 
 // CORE
-@import "core/core.colors";
 @import "core/core.typography";
+@import "core/core.colors";
 
 // ELEMENTS
 @import "elements/elements.root";
@@ -44,20 +44,15 @@
 @import "objects/objects.row";
 
 // COMPONENTS
-@import "components/components.container";
 @import "components/components.buttons";
 
 // UTILITIES
+@import "utilities/utilities.typography";
+@import "utilities/utilities.text-align";
+@import "utilities/utilities.displays";
 @import "utilities/utilities.clearfix";
 @import "utilities/utilities.widths";
-@import "utilities/utilities.headings";
 @import "utilities/utilities.spacings";
-$inuit-responsive-spacing-directions: $inuit-spacing-directions !default;
-$inuit-responsive-spacing-properties: $inuit-spacing-properties !default;
-$inuit-responsive-spacing-sizes: $inuit-spacing-sizes !default;
 @import "utilities/utilities.responsive-spacings";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
-@import "utilities/utilities.headings";
-@import "utilities/utilities.text-align";
-@import "utilities/utilities.display";

@@ -4,12 +4,12 @@
 
 $headings-color: var(--primary-90) !default;
 
-$inuit-font-size-h1: 36px !default;
-$inuit-font-size-h2: 28px !default;
-$inuit-font-size-h3: 24px !default;
-$inuit-font-size-h4: 20px !default;
-$inuit-font-size-h5: 18px !default;
-$inuit-font-size-h6: 16px !default;
+$inuit-font-size-h1: $heading-scale-one !default;
+$inuit-font-size-h2: $heading-scale-two !default;
+$inuit-font-size-h3: $heading-scale-three !default;
+$inuit-font-size-h4: $heading-scale-four !default;
+$inuit-font-size-h5: $heading-scale-five !default;
+$inuit-font-size-h6: $heading-scale-six !default;
 
 h1,
 h2,

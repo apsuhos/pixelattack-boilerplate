@@ -1,52 +1,46 @@
 /* ==========================================================================
-   #ROW
+   #WRAPPER
    ========================================================================== */
 
-$inuit-row-breakpoint: map-get($mq-breakpoints, wide) !default;
+/**
+ * Page-level constraining and wrapping elements.
+ */
 
-.o-row {
-  padding-top: $inuit-global-spacing-unit;
-  padding-bottom: $inuit-global-spacing-unit;
+$inuit-wrapper-width: 1860px !default;
+$inuit-wrapper-wide-width: map-get($mq-breakpoints, wide) !default;
+$inuit-wrapper-narrow-width: map-get($mq-breakpoints, desktop) !default;
 
-  @include mq($from: $inuit-row-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-large;
-    padding-bottom: $inuit-global-spacing-unit-large;
-  }
+@if (type-of($inuit-wrapper-width) != number) {
+  @error "`#{$inuit-wrapper-width}` needs to be a number.";
 }
 
-.o-row-tiny {
-  padding-top: $inuit-global-spacing-unit-tiny;
-  padding-bottom: $inuit-global-spacing-unit-tiny;
-
-  @include mq($from: $inuit-row-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-small;
-    padding-bottom: $inuit-global-spacing-unit-small;
+.o-wrapper {
+  @include inuit-clearfix();
+  padding-right: $inuit-global-spacing-unit-tiny;
+  padding-left: $inuit-global-spacing-unit-tiny;
+  @include mq($from: tablet) {
+    padding-right: $inuit-global-spacing-unit-small;
+    padding-left: $inuit-global-spacing-unit-small;
   }
+  @include mq($from: desktop) {
+    padding-right: $inuit-global-spacing-unit;
+    padding-left: $inuit-global-spacing-unit;
+  }
+  @include mq($from: wide) {
+    padding-right: $inuit-global-spacing-unit-huge;
+    padding-left: $inuit-global-spacing-unit-huge;
+  }
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $inuit-wrapper-width;
 }
 
-.o-row-small {
-  padding-top: $inuit-global-spacing-unit-small;
-  padding-bottom: $inuit-global-spacing-unit-small;
-
-  @include mq($from: $inuit-row-breakpoint) {
-    padding-top: $inuit-global-spacing-unit;
-    padding-bottom: $inuit-global-spacing-unit;
-  }
+.o-wrapper--wide {
+  max-width: map-get($mq-breakpoints, wide);
 }
 
-.o-row-large {
-  padding-top: $inuit-global-spacing-unit-large;
-  padding-bottom: $inuit-global-spacing-unit-large;
-
-  @include mq($from: $inuit-row-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-huge;
-    padding-bottom: $inuit-global-spacing-unit-huge;
-  }
-}
-
-.o-row-huge {
-  padding-top: $inuit-global-spacing-unit-huge;
-  padding-bottom: $inuit-global-spacing-unit-huge;
+.o-wrapper--narrow {
+  max-width: map-get($mq-breakpoints, desktop);
 }
 
 /* 

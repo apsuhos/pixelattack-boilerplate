@@ -7,15 +7,15 @@
 // up or down based on viewport size and the $inuit-fluid-font-size-scale-rate.
 $fluid-font-size: false !default;
 
-$inuit-fluid-font-size-breakpoint: map-get($mq-breakpoints, wide) !default;
+$inuit-fluid-font-size-breakpoint: mq-get-breakpoint-width(wide) !default;
 $global-typography-breakpoint: $inuit-fluid-font-size-breakpoint !default;
 
 // Set the rate at which font sizes scale both up and down depending on
 // viewport size.
 $inuit-fluid-font-size-scale-rate: 0.85 !default;
 
-// Enable or disable max boundaries
-$inuit-fluid-font-size-max-boundaries: true !default;
+// Enable max boundaries
+$inuit-fluid-font-size-max-boundaries: false !default;
 
 @mixin inuit-fluid-font-size(
   $font-size,

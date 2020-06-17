@@ -1,5 +1,5 @@
 /* ==========================================================================
-   #HEADINGS
+   #TYPOGRAPHY
    ========================================================================== */
 
 .u-h1 {
@@ -26,6 +26,26 @@
   @include inuit-font-size($inuit-font-size-h6);
 }
 
+.u-xlarge {
+  @include inuit-font-size($type-scale-xlarge);
+}
+
+.u-large {
+  @include inuit-font-size($type-scale-large, $modifier: -1);
+}
+
+.u-regular {
+  @include inuit-font-size($type-scale-regular);
+}
+
+.u-small {
+  @include inuit-font-size($type-scale-small, $modifier: -1);
+}
+
+.u-xsmall {
+  @include inuit-font-size($type-scale-xsmall);
+}
+
 @if $inuit-fluid-font-size == true {
   .u-h1 {
     @include inuit-fluid-font-size($inuit-font-size-h1);
@@ -49,5 +69,25 @@
 
   .u-h6 {
     @include inuit-fluid-font-size($inuit-font-size-h6);
+  }
+
+  .u-xlarge {
+    @include inuit-fluid-font-size($type-scale-xlarge);
+  }
+
+  .u-large {
+    @include inuit-fluid-font-size($type-scale-large, $modifier: -1);
+  }
+
+  .u-regular {
+    @include inuit-fluid-font-size($type-scale-regular);
+  }
+
+  .u-small {
+    @include inuit-fluid-font-size($type-scale-small, $modifier: -1);
+  }
+
+  .u-xsmall {
+    @include inuit-fluid-font-size($type-scale-xsmall);
   }
 }

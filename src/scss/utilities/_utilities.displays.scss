@@ -1,5 +1,5 @@
 /* ==========================================================================
-   #DISPLAY
+   #DISPLAYS
    ========================================================================== */
 
 $displays: true !default;
@@ -13,7 +13,6 @@ $display-aliases: true !default;
 //   .u-display-inline-block
 //   .u-display-none
 
-$displays: false !default;
 $display-values: (
   none,
   inline,
@@ -30,7 +29,6 @@ $display-values: (
 //   .u-hide
 //   .u-show@tablet
 
-$display-aliases: false !default;
 $display-alias-definitions: (
   none: hide,
   block: show,

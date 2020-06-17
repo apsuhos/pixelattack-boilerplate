@@ -2,12 +2,7 @@
    #CUSTOMIZATION
    ========================================================================== */
 
-// Baseline grid lines height
-
 $inuit-global-baseline: 6px;
-
-// How many grid lines should our spacing unit variants span?
-// Each value should be an unitless integer
 
 $inuit-global-spacing-unit-factor-tiny:    1; //  6px
 $inuit-global-spacing-unit-factor-small:   2; // 12px
@@ -15,17 +10,11 @@ $inuit-global-spacing-unit-factor:         4; // 24px
 $inuit-global-spacing-unit-factor-large:   8; // 48px
 $inuit-global-spacing-unit-factor-huge:   16; // 96px
 
-// Spacing values are determined based on your project’s global baseline grid.
-// It is not recommended that you modify these following variables
-// (it can break your vertical rhythm), but if you need to, you can.
-
 $inuit-global-spacing-unit:       $inuit-global-baseline * $inuit-global-spacing-unit-factor;
 $inuit-global-spacing-unit-tiny:  $inuit-global-baseline * $inuit-global-spacing-unit-factor-tiny;
 $inuit-global-spacing-unit-small: $inuit-global-baseline * $inuit-global-spacing-unit-factor-small;
 $inuit-global-spacing-unit-large: $inuit-global-baseline * $inuit-global-spacing-unit-factor-large;
 $inuit-global-spacing-unit-huge:  $inuit-global-baseline * $inuit-global-spacing-unit-factor-huge;
-
-// Base typographical styles.
 
 $inuit-global-font-size: 16px;
 $inuit-global-line-height: $inuit-global-spacing-unit;
@@ -41,6 +30,8 @@ $global-outline-width: $global-line-width;
 $global-outline-style: solid;
 $global-focus-offset: 3px;
 
+$mq-base-font-size: $inuit-global-font-size;
+$mq-responsive: true;
 $mq-breakpoints: (
   mobile: 320px,
   tablet: 740px,
@@ -49,7 +40,7 @@ $mq-breakpoints: (
 );
 $mq-show-breakpoints: (mobile, tablet, desktop, wide);
 
-$inuit-fluid-font-size: false;
+$inuit-fluid-font-size: true;
 $inuit-fluid-font-size-breakpoint: map-get($mq-breakpoints, wide);
 $global-typography-breakpoint: $inuit-fluid-font-size-breakpoint;
 $inuit-fluid-font-size-scale-rate: 0.85;
@@ -61,20 +52,41 @@ $custom-fonts: false;
 
 $body-color: var(--primary-90);
 $headings-color: var(--primary-90);
-$inuit-font-size-h1: 36px;
-$inuit-font-size-h2: 28px;
-$inuit-font-size-h3: 24px;
-$inuit-font-size-h4: 20px;
-$inuit-font-size-h5: 18px;
-$inuit-font-size-h6: 16px;
-
 $links-color: var(--primary-60);
 
+$heading-scale-one: 64px;
+$heading-scale-two: 53.333px;
+$heading-scale-three: 44.444px;
+$heading-scale-four: 37.037px;
+$heading-scale-five: 30.864px;
+$heading-scale-six: 25.72px;
+
+$type-scale-xlarge: 23.04px;
+$type-scale-large: 19.2px;
+$type-scale-regular: 16px; // THIS SHOULD BE SET BASED ON $inuit-global-font-size
+$type-scale-small: 13.333px;
+$type-scale-xsmall: 11.111px;
+
+$inuit-font-size-h1: $heading-scale-one;
+$inuit-font-size-h2: $heading-scale-two;
+$inuit-font-size-h3: $heading-scale-three;
+$inuit-font-size-h4: $heading-scale-four;
+$inuit-font-size-h5: $heading-scale-five;
+$inuit-font-size-h6: $heading-scale-six;
+
 $inuit-wrapper-width: 1860px;
+$inuit-wrapper-wide-width: map-get($mq-breakpoints, wide);
+$inuit-wrapper-narrow-width: map-get($mq-breakpoints, desktop);
 
 $inuit-row-breakpoint: map-get($mq-breakpoints, wide);
 
-$inuit-offsets: true;
-$inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12;
+$button-primary-bg-color: var(--primary-60);
+$button-primary-bg-color-hover: var(--primary-70);
+$button-primary-color: var(--global-white);
+$btn-ghost-border-width: 3px;
 
 $text-align-direction: true;
+$displays: true;
+
+$inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12;
+$inuit-offsets: false;
