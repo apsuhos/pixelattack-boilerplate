@@ -2,15 +2,17 @@
    #LINKS
    ========================================================================== */
 
+$links-color: var(--primary-40) !default;
+
 a {
-  color: var(--primary-60);
+  color: $links-color;
 }
 
 a:focus {
   outline-width: $global-outline-width;
   outline-style: $global-outline-style;
   outline-offset: $global-focus-offset;
-  outline-color: var(--primary-60);
+  outline-color: $links-color;
 }
 
 a:focus,
