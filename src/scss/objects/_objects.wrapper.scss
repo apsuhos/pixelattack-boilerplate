@@ -6,9 +6,15 @@
  * Page-level constraining and wrapping elements.
  */
 
-$inuit-wrapper-width: 1860px !default;
-$inuit-wrapper-wide-width: map-get($mq-breakpoints, wide) !default;
-$inuit-wrapper-narrow-width: map-get($mq-breakpoints, desktop) !default;
+$inuit-wrapper-xsmall-width: map-get($mq-breakpoints, mobile) !default; // 320
+$inuit-wrapper-small-width: map-get($mq-breakpoints, tablet) !default; // 740
+$inuit-wrapper-width: map-get($mq-breakpoints, desktop) !default; // 980
+$inuit-wrapper-large-width: map-get($mq-breakpoints, wide) !default; // 1300
+@include mq-add-breakpoint(
+  wider,
+  1860px
+); // Creating the breakpoint here because it is not needed in the breakpoint map
+$inuit-wrapper-xlarge-width: map-get($mq-breakpoints, wider) !default; // 1860
 
 @if (type-of($inuit-wrapper-width) != number) {
   @error "`#{$inuit-wrapper-width}` needs to be a number.";
@@ -26,78 +32,108 @@ $inuit-wrapper-narrow-width: map-get($mq-breakpoints, desktop) !default;
     padding-right: $inuit-global-spacing-unit;
     padding-left: $inuit-global-spacing-unit;
   }
-  @include mq($from: wide) {
-    padding-right: $inuit-global-spacing-unit-huge;
-    padding-left: $inuit-global-spacing-unit-huge;
-  }
   margin-right: auto;
   margin-left: auto;
   max-width: $inuit-wrapper-width;
 }
 
-.o-wrapper--wide {
-  max-width: map-get($mq-breakpoints, wide);
+.o-wrapper--xsmall {
+  padding-right: $inuit-global-spacing-unit-tiny;
+  padding-left: $inuit-global-spacing-unit-tiny;
+  max-width: map-get($mq-breakpoints, mobile); // 320
 }
 
-.o-wrapper--narrow {
-  max-width: map-get($mq-breakpoints, desktop);
+.o-wrapper--small {
+  padding-right: $inuit-global-spacing-unit-tiny;
+  padding-left: $inuit-global-spacing-unit-tiny;
+  @include mq($from: tablet) {
+    padding-right: $inuit-global-spacing-unit-small;
+    padding-left: $inuit-global-spacing-unit-small;
+  }
+  max-width: map-get($mq-breakpoints, tablet); // 740
+}
+
+.o-wrapper--large {
+  padding-right: $inuit-global-spacing-unit-tiny;
+  padding-left: $inuit-global-spacing-unit-tiny;
+  @include mq($from: tablet) {
+    padding-right: $inuit-global-spacing-unit-small;
+    padding-left: $inuit-global-spacing-unit-small;
+  }
+  @include mq($from: desktop) {
+    padding-right: $inuit-global-spacing-unit;
+    padding-left: $inuit-global-spacing-unit;
+  }
+  @include mq($from: wide) {
+    padding-right: $inuit-global-spacing-unit-huge;
+    padding-left: $inuit-global-spacing-unit-huge;
+  }
+  max-width: map-get($mq-breakpoints, wide); // 1300
+}
+
+.o-wrapper--xlarge {
+  padding-right: $inuit-global-spacing-unit-tiny;
+  padding-left: $inuit-global-spacing-unit-tiny;
+  @include mq($from: tablet) {
+    padding-right: $inuit-global-spacing-unit-small;
+    padding-left: $inuit-global-spacing-unit-small;
+  }
+  @include mq($from: desktop) {
+    padding-right: $inuit-global-spacing-unit;
+    padding-left: $inuit-global-spacing-unit;
+  }
+  @include mq($from: wide) {
+    padding-right: $inuit-global-spacing-unit-huge;
+    padding-left: $inuit-global-spacing-unit-huge;
+  }
+  max-width: map-get($mq-breakpoints, wider); // 1860
 }
 
 /* 
 <section style="background-color: rebeccapurple; color: white;">
-  <div class="o-row-large">
-    <div class="o-row">
-      <div class="o-wrapper">
-        <p class="u-xlarge">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Consectetur blanditiis voluptas quas ratione minus neque aperiam
-          magnam suscipit optio. Tenetur laborum assumenda, culpa minima in
-          commodi soluta rerum ipsa temporibus! Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Maiores iure obcaecati laudantium
-          labore, vitae quo. Omnis accusamus hic esse dolor suscipit debitis
-          quasi est sapiente ipsa, corrupti officia minima amet?
-        </p>
+      <div class="o-row-large">
+        <div class="o-row">
+          <div class="o-wrapper o-wrapper--large">
+            <h1>Hello world</h1>
+            <p class="u-xlarge">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur blanditiis voluptas quas ratione minus neque aperiam
+              magnam suscipit optio.
+            </p>
+          </div>
+        </div>
+        <div class="o-row-small">
+          <div class="o-wrapper">
+            <p class="u-large">
+              XLARGE Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Inventore est a assumenda quos, architecto consequatur nemo omnis
+              maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
+              fuga itaque nihil incidunt.
+            </p>
+          </div>
+        </div>
+        <div class="o-row-small">
+          <div class="o-wrapper o-wrapper--desktop">
+            <p class="u-regular">
+              REGULAR Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Inventore est a assumenda quos, architecto consequatur nemo omnis
+              maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
+              fuga itaque nihil incidunt.
+            </p>
+            <p class="u-small">
+              SMALL Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Inventore est a assumenda quos, architecto consequatur nemo omnis
+              maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
+              fuga itaque nihil incidunt.
+            </p>
+            <p class="u-xsmall">
+              XSMALL Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Inventore est a assumenda quos, architecto consequatur nemo omnis
+              maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
+              fuga itaque nihil incidunt.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="o-row-small">
-      <div class="o-wrapper o-wrapper--wide">
-        <h1>Hello world</h1>
-        <p class="u-xlarge">
-          XLARGE Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-      </div>
-    </div>
-    <div class="o-row-small">
-      <div class="o-wrapper o-wrapper--narrow">
-        <p class="u-large">
-          LARGE Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-        <p class="u-regular">
-          REGULAR Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-        <p class="u-small">
-          SMALL Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-        <p class="u-xsmall">
-          XSMALL Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 */
