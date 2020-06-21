@@ -40,7 +40,7 @@ $mq-breakpoints: (
 );
 $mq-show-breakpoints: (mobile, tablet, desktop, wide);
 
-$inuit-fluid-font-size: true;
+$inuit-fluid-font-size: false;
 $inuit-fluid-font-size-breakpoint: map-get($mq-breakpoints, wide);
 $global-typography-breakpoint: $inuit-fluid-font-size-breakpoint;
 $inuit-fluid-font-size-scale-rate: 0.85;
