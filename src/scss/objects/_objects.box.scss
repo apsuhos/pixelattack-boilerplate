@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #BOX
+   ========================================================================== */
+
+$inuit-box-breakpoint: map-get($mq-breakpoints, wide) !default;
+
+.o-box {
+  padding-top: $inuit-global-spacing-unit;
+  padding-bottom: $inuit-global-spacing-unit;
+
+  @include mq($from: $inuit-box-breakpoint) {
+    padding-top: $inuit-global-spacing-unit-large;
+    padding-bottom: $inuit-global-spacing-unit-large;
+  }
+}
+
+.o-box-tiny {
+  padding-top: $inuit-global-spacing-unit-tiny;
+  padding-bottom: $inuit-global-spacing-unit-tiny;
+
+  @include mq($from: $inuit-box-breakpoint) {
+    padding-top: $inuit-global-spacing-unit-small;
+    padding-bottom: $inuit-global-spacing-unit-small;
+  }
+}
+
+.o-box-small {
+  padding-top: $inuit-global-spacing-unit-small;
+  padding-bottom: $inuit-global-spacing-unit-small;
+
+  @include mq($from: $inuit-box-breakpoint) {
+    padding-top: $inuit-global-spacing-unit;
+    padding-bottom: $inuit-global-spacing-unit;
+  }
+}
+
+.o-box-large {
+  padding-top: $inuit-global-spacing-unit-large;
+  padding-bottom: $inuit-global-spacing-unit-large;
+
+  @include mq($from: $inuit-box-breakpoint) {
+    padding-top: $inuit-global-spacing-unit-huge;
+    padding-bottom: $inuit-global-spacing-unit-huge;
+  }
+}
+
+.o-box-huge {
+  padding-top: $inuit-global-spacing-unit-huge;
+  padding-bottom: $inuit-global-spacing-unit-huge;
+}
+
+/*
+
+<div style="background-color: rebeccapurple; color: white;">
+  <div class="o-box-large">
+    <div class="o-wrapper o-wrapper--large">
+      <div class="o-row-large">
+        <h1 class="u-margin-bottom-none">Hello world!</h1>
+      </div>
+      <p class="u-margin-bottom-none">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
+        perferendis impedit, iste deserunt, facere possimus recusandae
+        corporis blanditiis repudiandae facilis nobis fugiat suscipit. Ut,
+        exercitationem. Iste assumenda possimus eaque amet?
+      </p>
+    </div>
+  </div>
+</div>
+
+*/

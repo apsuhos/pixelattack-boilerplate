@@ -81,6 +81,7 @@ $inuit-wrapper-large-width: map-get($mq-breakpoints, wide); // 1300
 $inuit-wrapper-xlarge-width: map-get($mq-breakpoints, wider); // 1860
 
 $inuit-row-breakpoint: map-get($mq-breakpoints, wide);
+$inuit-box-breakpoint: map-get($mq-breakpoints, wide) !default;
 
 $button-primary-bg-color: var(--primary-60);
 $button-primary-bg-color-hover: var(--primary-70);

@@ -5,95 +5,57 @@
 $inuit-row-breakpoint: map-get($mq-breakpoints, wide) !default;
 
 .o-row {
-  padding-top: $inuit-global-spacing-unit;
-  padding-bottom: $inuit-global-spacing-unit;
+  margin-bottom: $inuit-global-spacing-unit;
 
   @include mq($from: $inuit-row-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-large;
-    padding-bottom: $inuit-global-spacing-unit-large;
+    margin-bottom: $inuit-global-spacing-unit-large;
   }
 }
 
 .o-row-tiny {
-  padding-top: $inuit-global-spacing-unit-tiny;
-  padding-bottom: $inuit-global-spacing-unit-tiny;
+  margin-bottom: $inuit-global-spacing-unit-tiny;
 
   @include mq($from: $inuit-row-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-small;
-    padding-bottom: $inuit-global-spacing-unit-small;
+    margin-bottom: $inuit-global-spacing-unit-small;
   }
 }
 
 .o-row-small {
-  padding-top: $inuit-global-spacing-unit-small;
-  padding-bottom: $inuit-global-spacing-unit-small;
+  margin-bottom: $inuit-global-spacing-unit-small;
 
   @include mq($from: $inuit-row-breakpoint) {
-    padding-top: $inuit-global-spacing-unit;
-    padding-bottom: $inuit-global-spacing-unit;
+    margin-bottom: $inuit-global-spacing-unit;
   }
 }
 
 .o-row-large {
-  padding-top: $inuit-global-spacing-unit-large;
-  padding-bottom: $inuit-global-spacing-unit-large;
+  margin-bottom: $inuit-global-spacing-unit-large;
 
   @include mq($from: $inuit-row-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-huge;
-    padding-bottom: $inuit-global-spacing-unit-huge;
+    margin-bottom: $inuit-global-spacing-unit-huge;
   }
 }
 
 .o-row-huge {
-  padding-top: $inuit-global-spacing-unit-huge;
-  padding-bottom: $inuit-global-spacing-unit-huge;
+  margin-bottom: $inuit-global-spacing-unit-huge;
 }
 
-/* 
-<section style="background-color: rebeccapurple; color: white;">
-  <div class="o-row-large">
-    <div class="o-row">
-      <div class="o-wrapper o-wrapper--large">
-        <h1>Hello world</h1>
-        <p class="u-xlarge">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Consectetur blanditiis voluptas quas ratione minus neque aperiam
-          magnam suscipit optio.
-        </p>
+/*
+
+<div style="background-color: rebeccapurple;">
+  <div class="o-box-large">
+    <div class="o-wrapper o-wrapper--large">
+      <div class="o-row-large">
+        <h1 class="u-margin-bottom-none">Hello world!</h1>
       </div>
-    </div>
-    <div class="o-row-small">
-      <div class="o-wrapper">
-        <p class="u-large">
-          XLARGE Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-      </div>
-    </div>
-    <div class="o-row-small">
-      <div class="o-wrapper o-wrapper--desktop">
-        <p class="u-regular">
-          REGULAR Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-        <p class="u-small">
-          SMALL Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-        <p class="u-xsmall">
-          XSMALL Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Inventore est a assumenda quos, architecto consequatur nemo omnis
-          maiores ut ratione, quisquam ea ipsam reiciendis quas dignissimos
-          fuga itaque nihil incidunt.
-        </p>
-      </div>
+      <p class="u-margin-bottom-none">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
+        perferendis impedit, iste deserunt, facere possimus recusandae
+        corporis blanditiis repudiandae facilis nobis fugiat suscipit. Ut,
+        exercitationem. Iste assumenda possimus eaque amet?
+      </p>
     </div>
   </div>
-</section>
+</div>
+
 */
