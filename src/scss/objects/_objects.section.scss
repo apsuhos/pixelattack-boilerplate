@@ -1,16 +1,18 @@
 /* ==========================================================================
-   #ROW
+   #SECTION
    ========================================================================== */
 
-$inuit-row-breakpoint: map-get($mq-breakpoints, wide) !default;
+$inuit-section-breakpoint: map-get($mq-breakpoints, wide) !default;
 
-.o-row {
+.o-section {
   @include inuit-clearfix();
   display: block;
-  margin-bottom: $inuit-global-spacing-unit;
+  padding-top: $inuit-global-spacing-unit;
+  padding-bottom: $inuit-global-spacing-unit;
 
-  @include mq($from: $inuit-row-breakpoint) {
-    margin-bottom: $inuit-global-spacing-unit-large;
+  @include mq($from: $inuit-section-breakpoint) {
+    padding-top: $inuit-global-spacing-unit-large;
+    padding-bottom: $inuit-global-spacing-unit-large;
   }
 
   > :last-child {
@@ -18,32 +20,39 @@ $inuit-row-breakpoint: map-get($mq-breakpoints, wide) !default;
   }
 }
 
-.o-row--tiny {
-  margin-bottom: $inuit-global-spacing-unit-tiny;
+.o-section--tiny {
+  padding-top: $inuit-global-spacing-unit-tiny;
+  padding-bottom: $inuit-global-spacing-unit-tiny;
 
-  @include mq($from: $inuit-row-breakpoint) {
-    margin-bottom: $inuit-global-spacing-unit-small;
+  @include mq($from: $inuit-section-breakpoint) {
+    padding-top: $inuit-global-spacing-unit-small;
+    padding-bottom: $inuit-global-spacing-unit-small;
   }
 }
 
-.o-row--small {
-  margin-bottom: $inuit-global-spacing-unit-small;
+.o-section--small {
+  padding-top: $inuit-global-spacing-unit-small;
+  padding-bottom: $inuit-global-spacing-unit-small;
 
-  @include mq($from: $inuit-row-breakpoint) {
-    margin-bottom: $inuit-global-spacing-unit;
+  @include mq($from: $inuit-section-breakpoint) {
+    padding-top: $inuit-global-spacing-unit;
+    padding-bottom: $inuit-global-spacing-unit;
   }
 }
 
-.o-row--large {
-  margin-bottom: $inuit-global-spacing-unit-large;
+.o-section--large {
+  padding-top: $inuit-global-spacing-unit-large;
+  padding-bottom: $inuit-global-spacing-unit-large;
 
-  @include mq($from: $inuit-row-breakpoint) {
-    margin-bottom: $inuit-global-spacing-unit-huge;
+  @include mq($from: $inuit-section-breakpoint) {
+    padding-top: $inuit-global-spacing-unit-huge;
+    padding-bottom: $inuit-global-spacing-unit-huge;
   }
 }
 
-.o-row--huge {
-  margin-bottom: $inuit-global-spacing-unit-huge;
+.o-section-huge {
+  padding-top: $inuit-global-spacing-unit-huge;
+  padding-bottom: $inuit-global-spacing-unit-huge;
 }
 
 /*

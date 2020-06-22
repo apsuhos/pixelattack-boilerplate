@@ -36,13 +36,14 @@
 @import "objects/objects.media";
 @import "objects/objects.list-bare";
 @import "objects/objects.list-inline";
+@import "objects/objects.box";
 @import "objects/objects.block";
 @import "objects/objects.ratio";
 @import "objects/objects.crop";
 @import "objects/objects.table";
 @import "objects/objects.pack";
 @import "objects/objects.row";
-@import "objects/objects.box";
+@import "objects/objects.section";
 
 // COMPONENTS
 @import "components/components.buttons";

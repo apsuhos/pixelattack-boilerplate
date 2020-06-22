@@ -2,69 +2,152 @@
    #BOX
    ========================================================================== */
 
-$inuit-box-breakpoint: map-get($mq-breakpoints, wide) !default;
+$box-breakpoint: map-get($mq-breakpoints, wide) !default;
 
 .o-box {
-  padding-top: $inuit-global-spacing-unit;
-  padding-bottom: $inuit-global-spacing-unit;
+  @include inuit-clearfix();
+  display: block;
+  padding: $inuit-global-spacing-unit;
+  @include mq($from: $box-breakpoint) {
+    padding: $inuit-global-spacing-unit-large;
+  }
 
-  @include mq($from: $inuit-box-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-large;
-    padding-bottom: $inuit-global-spacing-unit-large;
+  > :last-child {
+    margin-bottom: 0;
   }
 }
 
-.o-box-tiny {
-  padding-top: $inuit-global-spacing-unit-tiny;
-  padding-bottom: $inuit-global-spacing-unit-tiny;
+.o-box--flush {
+  padding: 0;
+}
 
-  @include mq($from: $inuit-box-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-small;
-    padding-bottom: $inuit-global-spacing-unit-small;
+.o-box--tiny {
+  padding: $inuit-global-spacing-unit-tiny;
+  @include mq($from: $box-breakpoint) {
+    padding: $inuit-global-spacing-unit-small;
   }
 }
 
-.o-box-small {
-  padding-top: $inuit-global-spacing-unit-small;
-  padding-bottom: $inuit-global-spacing-unit-small;
-
-  @include mq($from: $inuit-box-breakpoint) {
-    padding-top: $inuit-global-spacing-unit;
-    padding-bottom: $inuit-global-spacing-unit;
+.o-box--small {
+  padding: $inuit-global-spacing-unit-small;
+  @include mq($from: $box-breakpoint) {
+    padding: $inuit-global-spacing-unit;
   }
 }
 
-.o-box-large {
-  padding-top: $inuit-global-spacing-unit-large;
-  padding-bottom: $inuit-global-spacing-unit-large;
-
-  @include mq($from: $inuit-box-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-huge;
-    padding-bottom: $inuit-global-spacing-unit-huge;
+.o-box--large {
+  padding: $inuit-global-spacing-unit-large;
+  @include mq($from: $box-breakpoint) {
+    padding: $inuit-global-spacing-unit-huge;
   }
 }
 
-.o-box-huge {
-  padding-top: $inuit-global-spacing-unit-huge;
-  padding-bottom: $inuit-global-spacing-unit-huge;
+.o-box--huge {
+  padding: $inuit-global-spacing-unit-huge;
 }
 
 /*
 
-<div style="background-color: rebeccapurple; color: white;">
-  <div class="o-box-large">
-    <div class="o-wrapper o-wrapper--large">
-      <div class="o-row-large">
-        <h1 class="u-margin-bottom-none">Hello world!</h1>
+<section style="background-color: pink;">
+  <div class="o-wrapper o-wrapper--large">
+    <div class="o-section o-section--large">
+      <div class="o-row o-row--large">
+        <div class="o-row">
+          <div class="u-1/2 u-push-1/4">
+            <div style="background-color: white;">
+              <div class="o-box">
+                <div class="o-media o-media--middle">
+                  <div class="o-media__img">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="36"
+                      height="36"
+                      viewBox="0 0 512.042 512.042"
+                    >
+                      <path
+                        d="M300.65 157.799c-1.324 2.137-2.032 4.655-1.957 7.29.15 5.317 3.454 9.983 8.418 11.89l62.628 24.05c1.529.588 3.122.88 4.712.88 1.814 0 3.625-.381 5.333-1.141 3.204-1.426 5.661-4.014 6.917-7.288l24.144-62.87c1.894-4.932.661-10.487-3.141-14.153-1.923-1.855-4.304-3.036-6.817-3.483l-30.469-60.661c-7.313-14.557-21.975-23.6-38.264-23.6H190.186a42.7862 42.7862 0 00-37.635 22.396l-47.37 87.287c-4.971 9.158-1.644 20.799 7.416 25.949l74.172 42.159c2.998 1.705 6.265 2.514 9.49 2.514 6.709 0 13.238-3.502 16.786-9.739l22.524-39.59c2.048-3.6.79-8.179-2.811-10.228-3.6-2.048-8.179-.791-10.228 2.811l-22.523 39.59c-1.165 2.047-3.779 2.767-5.827 1.602l-74.172-42.16c-2.008-1.142-2.746-3.722-1.644-5.753l47.37-87.288a27.7974 27.7974 0 0124.451-14.55h43.22L259.3 87.645l-19.008 33.41c-2.048 3.6-.79 8.179 2.811 10.228 1.17.666 2.444.982 3.702.982 2.608 0 5.144-1.363 6.526-3.793l14.751-25.928zm31.504-114.086c10.583 0 20.109 5.875 24.86 15.333l32.671 65.045c1.201 2.392 3.519 3.874 6.02 4.104l-22.335 58.162-57.551-22.101a7.4853 7.4853 0 001.548-2.718 7.5004 7.5004 0 00-.687-6.081L250.817 43.713zM222.886 356.992h-45.754c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h45.754c2.356 0 4.273 1.917 4.273 4.273v86.507c0 2.356-1.917 4.273-4.273 4.273H109.875a27.8038 27.8038 0 01-24.431-14.512l-19.781-36.317 26.475-44.224h49.067c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-40.087l32.769-54.736c2.342.022 4.758-.576 6.907-1.827 4.697-2.733 7.27-7.979 6.554-13.364l-8.708-65.541c-.975-7.332-7.731-12.507-15.064-11.53l-65.793 8.742c-5.112.679-9.305 4.133-10.942 9.015-.883 2.632-.933 5.375-.224 7.908l-38.94 56.123c-9.286 13.385-10.214 30.586-2.422 44.891l67.017 123.036c7.505 13.778 21.914 22.337 37.604 22.337h113.011c10.627 0 19.273-8.646 19.273-19.273v-86.507c-.001-10.628-8.647-19.274-19.274-19.274zM18.428 329.498c-5.062-9.294-4.459-20.47 1.573-29.166l41.523-59.848c1.506-2.171 1.723-4.899.74-7.212l61.715-8.2 8.12 61.113a7.5103 7.5103 0 00-3.129-.06 7.5002 7.5002 0 00-5.011 3.511l-66.625 111.29zM504.458 287.293l-56.799-82.3c-5.663-8.204-16.862-10.729-25.495-5.746l-74.02 42.714c-4.584 2.645-7.91 7.117-9.125 12.268s-.238 10.637 2.68 15.052l62.609 94.725H337.38a12.5862 12.5862 0 00-5.606-3.32c-4.393-1.23-8.947-.035-12.183 3.202l-48.95 48.95c-2.361 2.361-3.661 5.5-3.661 8.839s1.3 6.478 3.661 8.839l49.139 49.138c2.396 2.396 5.523 3.676 8.771 3.676 1.098 0 2.209-.146 3.311-.445a12.5866 12.5866 0 005.626-3.267h68.221c16.217 0 30.85-8.984 38.187-23.446l63.51-125.182c7.108-14.019 5.979-30.762-2.948-43.697zm-10.432 36.908l-42.578 83.924-.588-.889c-2.284-3.456-6.938-4.406-10.392-2.122-3.456 2.284-4.406 6.937-2.122 10.392l5.293 8.009-13.124 25.868c-4.767 9.396-14.273 15.233-24.81 15.233h-72.262c-2.041 0-3.927.824-5.298 2.191l-45.133-45.132 44.913-44.912c1.375 1.397 3.281 2.242 5.349 2.242h80.946l4.337 6.563c2.284 3.456 6.937 4.405 10.392 2.122 3.456-2.284 4.406-6.937 2.122-10.392l-76.86-116.288c-.886-1.34-.752-2.667-.594-3.337.158-.671.631-1.917 2.023-2.72l74.02-42.714c1.916-1.105 4.397-.545 5.653 1.274l56.799 82.3a27.7944 27.7944 0 011.914 28.388z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="o-media__body">
+                    <h3>Hello world!</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Doloremque id cupiditate, eveniet voluptate,
+                      nemo aspernatur et illum facilis iste quae adipisci
+                      iure sapiente excepturi doloribus commodi voluptates
+                      optio, fugiat harum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-row">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+            vero consequatur iusto laborum molestias officiis voluptas,
+            illum nam consectetur fugit accusantium officia, nostrum veniam
+            repellat aperiam reiciendis nisi, suscipit cupiditate.
+          </p>
+        </div>
       </div>
-      <p class="u-margin-bottom-none">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
-        perferendis impedit, iste deserunt, facere possimus recusandae
-        corporis blanditiis repudiandae facilis nobis fugiat suscipit. Ut,
-        exercitationem. Iste assumenda possimus eaque amet?
-      </p>
+      <div class="o-row o-row--large">
+        <div class="o-layout o-layout--large o-layout--stretch">
+          <div class="o-layout__item u-1/2@desktop">
+            <div style="background-color: white;">
+              <div class="o-box o-box--small">
+                <h2>Hello world! This is a bigger title!!</h2>
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                  <li>Item 5</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="o-layout__item u-1/2@desktop">
+            <div style="background-color: white;">
+              <div class="o-box o-box--small">
+                <h2>Hello world again!</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure tempora, praesentium repudiandae quidem voluptatem
+                  obcaecati explicabo sapiente molestiae. Impedit esse, rem
+                  illo et id eligendi quibusdam iusto repellendus eius
+                  corrupti?
+                </p>
+                <small>Hello world</small>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam eligendi illo quam. Expedita ad velit beatae
+                  assumenda deserunt eius provident earum consequuntur
+                  libero, hic aperiam incidunt quisquam quasi sint
+                  aspernatur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="o-row o-row--large">
+        <div style="background-color: white;">
+          <div class="o-box">
+            <h1>Hello again!!</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+              laboriosam enim dolorem tempore eligendi atque quae explicabo
+              neque sint officia, id corporis ullam fugit. Debitis itaque
+              consequatur mollitia aspernatur aliquid.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 */
