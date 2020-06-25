@@ -26,6 +26,7 @@ $font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
 
 // Does the project use custom fonts? Set that to true in the manifest file.
 $custom-fonts: false !default;
+$primary-type: "Nunito" !default;
 
 @font-face {
   font-family: "Nunito";

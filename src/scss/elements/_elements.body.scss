@@ -7,7 +7,7 @@ $body-color: var(--primary-90) !default;
 body {
   font-family: $font-system;
   @if $custom-fonts == true {
-    font-family: "Nunito";
+    font-family: $primary-type;
   }
   font-size: $inuit-global-font-size;
   @if $inuit-fluid-font-size == true {
