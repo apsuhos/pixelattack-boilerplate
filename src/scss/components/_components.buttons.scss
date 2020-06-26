@@ -2,10 +2,16 @@
    #BUTTONS
    ========================================================================== */
 
-$button-primary-bg-color: var(--primary-60) !default;
-$button-primary-bg-color-hover: var(--primary-70) !default;
+$button-primary-bg-color: var(--primary-70) !default;
 $button-primary-color: var(--global-white) !default;
-$btn-ghost-border-width: 3px !default;
+$button-primary-bg-color-hover: var(--primary-80) !default;
+
+$button-ghost-border-width: 3px !default;
+
+$button-primary-ghost-border-color: var(--primary-70) !default;
+$button-primary-ghost-color: var(--primary-70) !default;
+$button-primary-ghost-border-color-hover: var(--primary-80) !default;
+$button-primary-ghost-color-hover: var(--primary-80) !default;
 
 .c-btn {
   display: inline-block;
@@ -54,9 +60,9 @@ $btn-ghost-border-width: 3px !default;
    ========================================================================== */
 
 .c-btn--ghost {
-  border: $btn-ghost-border-width solid currentColor;
-  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width)
-    ($inuit-global-spacing-unit - $btn-ghost-border-width);
+  border: $button-ghost-border-width solid $button-primary-ghost-border-color;
+  padding: ($inuit-global-spacing-unit-small - $button-ghost-border-width)
+    ($inuit-global-spacing-unit - $button-ghost-border-width);
   transition: border-color $global-transition, color $global-transition;
 
   &,
@@ -67,22 +73,22 @@ $btn-ghost-border-width: 3px !default;
   }
 
   &.c-btn--small {
-    padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width)
-      ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+    padding: ($inuit-global-spacing-unit-tiny - $button-ghost-border-width)
+      ($inuit-global-spacing-unit-small - $button-ghost-border-width);
   }
 
   &.c-btn--large {
-    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width)
-      ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+    padding: ($inuit-global-spacing-unit - $button-ghost-border-width)
+      ($inuit-global-spacing-unit-large - $button-ghost-border-width);
   }
 
   &.c-btn--primary {
-    color: $button-primary-bg-color;
+    color: $button-primary-ghost-color;
 
     &:hover,
     &:focus {
-      border-color: $button-primary-bg-color-hover;
-      color: $button-primary-bg-color-hover;
+      border-color: $button-primary-ghost-border-color-hover;
+      color: $button-primary-ghost-color-hover;
     }
   }
 }

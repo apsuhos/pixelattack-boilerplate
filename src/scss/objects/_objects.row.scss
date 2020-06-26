@@ -3,6 +3,9 @@
    ========================================================================== */
 
 $inuit-row-breakpoint: map-get($mq-breakpoints, wide) !default;
+// The result of this multiplication must be multiple of the global-baseline-grid
+// for the vertical rhythm not to break
+$inuit-row-huge-factor: 1.25 !default;
 
 .o-row {
   @include inuit-clearfix();
@@ -44,6 +47,9 @@ $inuit-row-breakpoint: map-get($mq-breakpoints, wide) !default;
 
 .o-row--huge {
   margin-bottom: $inuit-global-spacing-unit-huge;
+  @include mq($from: $inuit-row-breakpoint) {
+    margin-bottom: $inuit-global-spacing-unit-huge * $inuit-row-huge-factor;
+  }
 }
 
 /*

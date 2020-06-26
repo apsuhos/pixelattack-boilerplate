@@ -2,8 +2,6 @@
    #HEADINGS
    ========================================================================== */
 
-$headings-color: var(--primary-90) !default;
-
 $inuit-font-size-h1: $heading-scale-one !default;
 $inuit-font-size-h2: $heading-scale-two !default;
 $inuit-font-size-h3: $heading-scale-three !default;
@@ -17,20 +15,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: $headings-color;
-  font-family: $primary-type;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 900;
-}
-
-h4,
-h5,
-h6 {
-  font-weight: 700;
+  @if $custom-fonts == true {
+    font-family: "Inter";
+  }
+  font-style: normal;
+  font-weight: 400;
 }
 
 h1 {

@@ -27,23 +27,23 @@
 }
 
 .u-xlarge {
-  @include inuit-font-size($type-scale-xlarge);
+  @include inuit-font-size($body-scale-xlarge);
 }
 
 .u-large {
-  @include inuit-font-size($type-scale-large, $modifier: -1);
+  @include inuit-font-size($body-scale-large);
 }
 
 .u-regular {
-  @include inuit-font-size($type-scale-regular);
+  @include inuit-font-size($body-scale-regular);
 }
 
 .u-small {
-  @include inuit-font-size($type-scale-small, $modifier: -1);
+  @include inuit-font-size($body-scale-small);
 }
 
 .u-xsmall {
-  @include inuit-font-size($type-scale-xsmall);
+  @include inuit-font-size($body-scale-xsmall);
 }
 
 @if $inuit-fluid-font-size == true {
@@ -72,22 +72,22 @@
   }
 
   .u-xlarge {
-    @include inuit-fluid-font-size($type-scale-xlarge);
+    @include inuit-fluid-font-size($body-scale-xlarge);
   }
 
   .u-large {
-    @include inuit-fluid-font-size($type-scale-large, $modifier: -1);
+    @include inuit-fluid-font-size($body-scale-large);
   }
 
   .u-regular {
-    @include inuit-fluid-font-size($type-scale-regular);
+    @include inuit-fluid-font-size($body-scale-regular);
   }
 
   .u-small {
-    @include inuit-fluid-font-size($type-scale-small, $modifier: -1);
+    @include inuit-fluid-font-size($body-scale-small);
   }
 
   .u-xsmall {
-    @include inuit-fluid-font-size($type-scale-xsmall);
+    @include inuit-fluid-font-size($body-scale-xsmall);
   }
 }

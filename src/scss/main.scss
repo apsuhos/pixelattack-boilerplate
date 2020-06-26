@@ -1,12 +1,135 @@
 // SETTINGS
-@import "configuration";
 
 @import "settings/settings.config";
+
+// Baseline grid lines height.
+
+$inuit-global-baseline: 7px; // 6px
+
+
+// How many grid lines should our spacing unit variants span?
+// Each value should be an unitless integer.
+
+$inuit-global-spacing-unit-factor-tiny:     1;  // 1
+$inuit-global-spacing-unit-factor-small:    2;  // 2 
+$inuit-global-spacing-unit-factor:          4;  // 4
+$inuit-global-spacing-unit-factor-large:    8;  // 8
+$inuit-global-spacing-unit-factor-huge:     16; // 16
+
+
+// Base typographical styles.
+
+$inuit-global-font-size: 19px; // 16px 
+
+/*==================================================================
+
+  The $inuit-global-baseline is the height of the grid lines.
+
+  This value, multiplied by the $inuit-global-spacing-unit 
+  ($inuit-global-spacing-unit-factor * $inuit-global-baseline = 6px * 4 = 24px for the default values)
+  provides us with the $inuit-global-line-height which is found in the
+  core files of the inuit framework. 
+
+  If you change the $inuit-global-baseline you should consider the
+  result of the $inuit-global-line-height too. For example, if you set it equal to 8px then
+  the line height would become 8px * 4 = 32px which is too high for a 16px global
+  font size. Thus, you should adjust the global font size too. 
+
+  So, the procedure is this:
+  First pick a body font size that renders well on the screen. Let's assume it is 19px.
+  A comfortable line height is 1.5 times bigger than the font size. So, 19px * 1.5 = 28.5px
+  is a value I am goi to target. I will not change the $inuit-global-spacing-unit-factor which
+  is 4 by default. So 4 * X = 28.5 => X = 7.125. We need this to be a integer so ~ 7. I will set
+  this as my baseline grid. 
+
+  You may consider adjusting the global spacing unit factor from 4 to something else and
+  leave the baseline grid at 6px. Let's say Y * 6 = 28.5 => Y = 4.75 ~ 5. But doing
+  than you will have to adjust all the other factors too for a harmonious differantiation.
+
+  For example you could set:
+
+  $inuit-global-baseline: 6px; // Leave it as the default value
+
+  // Change these factors
+
+  $inuit-global-spacing-unit-factor-tiny:     1;  
+  $inuit-global-spacing-unit-factor-small:    2;  
+  $inuit-global-spacing-unit-factor:          5;  
+  $inuit-global-spacing-unit-factor-large:    10;  
+  $inuit-global-spacing-unit-factor-huge:     20; 
+
+  $inuit-global-font-size: 19px; // Set the global font size to 19px
+
+  So now we have,
+
+  6px * 5 = 30px is the global line height
+
+  19 * 1.5 = 28.5 is the optimal line height. What we got is 30px/19px = 1.578947 which is acceptable.
+
+  You need to be cautious though when doing that, because if you leave
+  the default baseline at 6px and you increase the font size by a lot (19 is critical) then you
+  may stamble upon overlapping issues because the type won't fit inside the
+  baseline of just 6px.
+
+  That is why I think your safest bet is to change the font size and then adjust the
+  baseline height. If you adjust the the baseline height then you can mess with 
+  the factors too. Just do not change only the factors. 
+
+  When you change the factor you should also consider the change in the global line height.
+  Let's say you set the baseline at 7px and the global-spacing-unit-factor at 5. Then
+  the global line-height will be 35px which is very high for a 19px font size.  You could 
+  use a modifier to readjust it. 
+  @include inuit-font-size($inuit-global-font-size, $modifier: -1); // in the body
+  You will find out that by using a -1 modifier then 
+  the text becomes really crumbed. The next thing you do is increase the baseline. Messy
+
+  So finaly the formula is this:
+
+  Choose a font size for your font family. Multiply it by 1.5 for the optimal line height 
+  value. Divide it by 4 (or the factor you have chosen). Ceil it, or floor it. Then multiply
+  this number by 4 (or the factor you have chosen). Then divide the result with the font size
+  you picked. This is the line height
+
+  19px => 19px * 1.5 = 28.5px => 28.5px / 4 = 7.125 => 7 => 7 * 4 = 28 => 28 / 19 = 1,473 =>
+  
+  font-size: 19px;
+  line-height: 1.473;
+
+*/
+
 @import "settings/settings.core";
+
+
+$global-radius: 6px;
+$global-line-width: 3px;
+
+$global-transition-timing: 150ms;
+$global-transition-function: ease-in-out;
+$global-transition: $global-transition-timing $global-transition-function;
+
+$global-outline-width: $global-line-width;
+$global-outline-style: solid;
+$global-focus-offset: 3px;
+
 @import "settings/settings.global";
 
 // TOOLS
+
+$mq-responsive: true;
+$mq-breakpoints: (
+  mobile: 320px,
+  l-mobile: 540px,
+  tablet: 760px,
+  l-tablet: 980px,
+  desktop: 1200px,
+  l-desktop: 1420px,
+  wide: 1640px,
+  l-wide: 1860px
+);
+$mq-show-breakpoints: (mobile, l-mobile, tablet, l-tablet, desktop, l-desktop, wide, l-wide); 
 @import "mq";
+
+
 @import "tools/tools.font-size";
 @import "tools/tools.fluid-font-size";
 @import "tools/tools.clearfix";
@@ -19,23 +142,78 @@
 @import "generic/generic.shared";
 
 // CORE
+$heading-scale-one: 64px;
+$heading-scale-two: 53.333px;
+$heading-scale-three: 44.444px;
+$heading-scale-four: 37.037px;
+$heading-scale-five: 30.864px;
+$heading-scale-six: 25.72px;
+
+$body-scale-xlarge: 27.36px;
+$body-scale-large: 22.8px;
+$body-scale-regular: 19px; // THIS SHOULD BE SET BASED ON $inuit-global-font-size
+$body-scale-small: 15.833px;
+$body-scale-xsmall: 13.194px;
+
+$custom-fonts: true;
+
+/* ==================================================================
+  If you set the custom fonts to true then you need to go to 
+  https://google-webfonts-helper.herokuapp.com/fonts if you use google fonts
+  and donwload all the necessary assets. Follow the examples that are shown
+  in the _core.typography.scss
+*/
+
+$inuit-fluid-font-size: false;
+$inuit-fluid-font-size-breakpoint: map-get($mq-breakpoints, wide);
+$global-typography-breakpoint: $inuit-fluid-font-size-breakpoint;
+$inuit-fluid-font-size-scale-rate: 0.85;
+$inuit-fluid-font-size-max-boundaries: true;
 @import "core/core.typography";
 @import "core/core.colors";
 
 // ELEMENTS
 @import "elements/elements.root";
+
+$body-color: var(--primary-90);
 @import "elements/elements.body";
+
+
+$inuit-font-size-h1: $heading-scale-one;
+$inuit-font-size-h2: $heading-scale-two;
+$inuit-font-size-h3: $heading-scale-three;
+$inuit-font-size-h4: $heading-scale-four;
+$inuit-font-size-h5: $heading-scale-five;
+$inuit-font-size-h6: $heading-scale-six;
 @import "elements/elements.headings";
+
+$links-color: var(--primary-60);
 @import "elements/elements.links";
 @import "elements/elements.images";
 @import "elements/elements.tables";
 
 // OBJECTS
 @import "objects/objects.layout";
+
+$inuit-wrapper-tiny-width: map-get($mq-breakpoints, mobile);
+$inuit-wrapper-small-width: map-get($mq-breakpoints, tablet);
+$inuit-wrapper-width: map-get($mq-breakpoints, desktop);
+$inuit-wrapper-large-width: map-get($mq-breakpoints, wide);
+$inuit-wrapper-huge-width: map-get($mq-breakpoints, l-wide);
 @import "objects/objects.wrapper";
+
+$inuit-section-breakpoint: map-get($mq-breakpoints, wide);
+$inuit-section-huge-factor: 1.25 !default;
 @import "objects/objects.section";
+
+$inuit-row-breakpoint: map-get($mq-breakpoints, wide);
+$inuit-row-huge-factor: 1.25 !default;
 @import "objects/objects.row";
+
+$inuit-box-breakpoint: map-get($mq-breakpoints, wide);
+$inuit-box-huge-factor: 1.25 !default;
 @import "objects/objects.box";
+
 @import "objects/objects.media";
 @import "objects/objects.list-bare";
 @import "objects/objects.list-inline";
@@ -46,13 +224,32 @@
 @import "objects/objects.pack";
 
 // COMPONENTS
+
+$button-primary-bg-color: var(--primary-70);
+$button-primary-color: var(--global-white);
+$button-primary-bg-color-hover: var(--primary-80);
+
+$button-ghost-border-width: 3px;
+
+$button-primary-ghost-border-color: var(--primary-70);
+$button-primary-ghost-color: var(--primary-70);
+$button-primary-ghost-border-color-hover: var(--primary-80);
+$button-primary-ghost-color-hover: var(--primary-80);
 @import "components/components.buttons";
 
 // UTILITIES
 @import "utilities/utilities.typography";
+
+$text-align-direction: true;
 @import "utilities/utilities.text-align";
+
+$displays: true;
 @import "utilities/utilities.displays";
+@import "utilities/utilities.flexbox";
 @import "utilities/utilities.clearfix";
+
+$inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12;
+$inuit-offsets: true;
 @import "utilities/utilities.widths";
 @import "utilities/utilities.spacings";
 @import "utilities/utilities.responsive-spacings";

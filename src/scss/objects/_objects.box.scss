@@ -3,6 +3,7 @@
    ========================================================================== */
 
 $box-breakpoint: map-get($mq-breakpoints, wide) !default;
+$inuit-box-huge-factor: 1.25 !default;
 
 .o-box {
   @include inuit-clearfix();
@@ -44,6 +45,9 @@ $box-breakpoint: map-get($mq-breakpoints, wide) !default;
 
 .o-box--huge {
   padding: $inuit-global-spacing-unit-huge;
+  @include mq($from: $box-breakpoint) {
+    padding: $inuit-global-spacing-unit-huge * $inuit-section-huge-factor;
+  }
 }
 
 /*

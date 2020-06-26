@@ -2,9 +2,16 @@
    #TYPOGRAPHY
    ========================================================================== */
 
-// https://www.modularscale.com/?16,64&px&1.2 or https://www.modularscale.com/?16&px&1.2?64&px&1.2
+// Does the project use custom fonts? Set that to true in the manifest file.
+$custom-fonts: false !default;
 
-// HEADINGS SCALE
+// A neat small app that allows you to easily import google webfonts to your project
+// https://google-webfonts-helper.herokuapp.com/fonts
+
+// Use the modular scale app to create harmonious type scales
+// https://www.modularscale.com/?16&px&1.2?64&px&1.2 or https://www.modularscale.com/?16,64&px&1.2
+
+// Headings scale
 $heading-scale-one: 64px !default;
 $heading-scale-two: 53.333px !default;
 $heading-scale-three: 44.444px !default;
@@ -12,32 +19,27 @@ $heading-scale-four: 37.037px !default;
 $heading-scale-five: 30.864px !default;
 $heading-scale-six: 25.72px !default;
 
-// TYPE SCALE
-$type-scale-xlarge: 23.04px !default;
-$type-scale-large: 19.2px !default;
-$type-scale-regular: 16px !default; // THIS SHOULD BE SET BASED ON $inuit-global-font-size
-$type-scale-small: 13.333px !default;
-$type-scale-xsmall: 11.111px !default;
+// Body scale
+$body-scale-xlarge: 23.04px !default;
+$body-scale-large: 19.2px !default;
+$body-scale-regular: 16px !default; // THIS SHOULD BE SET BASED ON $inuit-global-font-size
+$body-scale-small: 13.333px !default;
+$body-scale-xsmall: 11.111px !default;
 
+// System fonts
 $font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
   sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-// https://google-webfonts-helper.herokuapp.com/fonts
-
-// Does the project use custom fonts? Set that to true in the manifest file.
-$custom-fonts: false !default;
-$primary-type: "Nunito" !default;
-
+// Define the @font-face rules here and all the possible variations
 @font-face {
-  font-family: "Nunito";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: local("Nunito Regular"), local("Nunito-Regular"),
-    url("../fonts/nunito/nunito-400") format("woff2"),
-    url("../fonts/nunito/nunito-400.woff") format("woff"),
-    url("../fonts/nunito/nunito-400.ttf") format("truetype");
+  src: local(""), url("../fonts/inter/inter-400.woff2") format("woff2"),
+    url("../fonts/inter/inter-400.woff") format("woff");
 }
 
+/* 
 @font-face {
   font-family: "Nunito";
   font-style: normal;
@@ -47,13 +49,4 @@ $primary-type: "Nunito" !default;
     url("../fonts/nunito/nunito-700.woff") format("woff"),
     url("../fonts/nunito/nunito-700.ttf") format("truetype");
 }
-
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 900;
-  src: local("Nunito Black"), local("Nunito-Black"),
-    url("../fonts/nunito/nunito-900.woff2") format("woff2"),
-    url("../fonts/nunito/nunito-900.woff") format("woff"),
-    url("../fonts/nunito/nunito-900.ttf") format("truetype");
-}
+*/
