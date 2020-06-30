@@ -4,26 +4,7 @@
 @import "switches";
 @import "tokens";
 
-// Light/Dark colors
-$brand-light: $brand-color-primary-010 !default;
-$brand-dark: $brand-color-primary-100 !default;
 
-// Surface/Background colors
-$brand-surface-primary: $brand-color-primary-100 !default;
-$brand-surface-primary-light: $brand-color-primary-010 !default;
-
-// Interactive colors
-$brand-interactive-light: $brand-color-primary-010 !default;
-$brand-interactive-light-hover: $brand-color-primary-010 !default;
-$brand-interactive-box-shadow-light: $brand-color-primary-060 !default;
-
-$brand-interactive-dark: $brand-color-primary-100 !default;
-$brand-interactive-dark-hover: $brand-color-primary-100 !default;
-$brand-interactive-box-shadow-dark: $brand-color-primary-050 !default;
- 
-// Outline color
-$brand-outline-light: $brand-color-primary-010 !default;
-$brand-outline-dark: $brand-color-primary-100 !default;
 
 /*==================================================================
 

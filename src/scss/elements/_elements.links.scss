@@ -4,9 +4,9 @@
 
 a:not(.c-btn) {
   text-decoration: none;
-  color: $brand-interactive-light;
+  color: var(--brand-interactive-primary);
   transition: box-shadow $global-transition;
-  box-shadow: inset 0 -0.1rem 0 $brand-interactive-box-shadow-light;
+  box-shadow: inset 0 -0.1rem 0 var(--brand-interactive-box-shadow-primary);
 }
 
 a:focus {
@@ -16,27 +16,27 @@ a:focus {
 }
 
 a:focus:not(.c-btn) {
-  outline-color: $brand-outline-light;
+  outline-color: var(--brand-outline-primary);
 }
 
 a:focus:not(.c-btn),
 a:hover:not(.c-btn) {
   text-decoration: none;
-  box-shadow: inset 0 -1.4rem 0 $brand-interactive-box-shadow-light;
+  box-shadow: inset 0 -1.4rem 0 var(--brand-interactive-box-shadow-primary);
 }
 
-.u-surface-primary-light {
+.u-surface-primary-alt {
   a:not(.c-btn) {
-    color: $brand-interactive-dark;
-    box-shadow: inset 0 -0.1rem 0 $brand-interactive-box-shadow-dark;
+    color: var(--brand-interactive-primary-alt);
+    box-shadow: inset 0 -0.1rem 0 var(--brand-interactive-box-shadow-primary-alt);
   }
 
   a:focus:not(.c-btn) {
-    outline-color: $brand-outline-dark;
+    outline-color: var(--brand-outline-primary-alt);
   }
 
   a:focus:not(.c-btn),
   a:hover:not(.c-btn) {
-    box-shadow: inset 0 -1.4rem 0 $brand-interactive-box-shadow-dark;
+    box-shadow: inset 0 -1.4rem 0 var(--brand-interactive-box-shadow-primary-alt);
   }
 }

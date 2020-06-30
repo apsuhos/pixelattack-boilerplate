@@ -3,29 +3,31 @@
    ========================================================================== */
 
 // Button colors
-$button-primary-color: $brand-interactive-light !default;
-$button-primary-bg-color: $brand-color-primary-060 !default;
-$button-primary-bg-color-hover: $brand-color-primary-070 !default;
-$button-primary-outline-color: $brand-outline-light !default;
+// $button-primary-color: var(--brand-interactive-light) !default;
+// $button-primary-bg-color: var(--brand-color-primary-060) !default;
+// $button-primary-bg-color-hover: var(--brand-color-primary-070) !default;
+// $button-primary-outline-color: var(--brand-outline-light) !default;
 
-$button-primary-color-on-light: $brand-interactive-light !default;
-$button-primary-bg-color-on-light: $brand-color-primary-060 !default;
-$button-primary-bg-color-on-light-hover: $brand-color-primary-070 !default;
-$button-primary-outline-color-on-light: $brand-outline-dark !default;
+// $button-primary-color-on-light: var(--brand-interactive-light) !default;
+// $button-primary-bg-color-on-light: var(--brand-color-primary-060) !default;
+// $button-primary-bg-color-on-light-hover: var(
+//   --brand-color-primary-070
+// ) !default;
+// $button-primary-outline-color-on-light: var(--brand-outline-dark) !default;
 
-$button-primary-ghost-color: $brand-interactive-light !default;
-$button-primary-ghost-color-hover: $brand-interactive-light !default;
-$button-primary-ghost-bg-color-hover: $brand-color-primary-070 !default;
-$button-primary-ghost-border-color: $brand-color-primary-010 !default;
-$button-primary-ghost-border-color-hover: $brand-color-primary-070 !default;
-$button-primary-ghost-outline-color: $brand-outline-light !default;
+// $button-primary-ghost-color: var(--brand-interactive-light) !default;
+// $button-primary-ghost-color-hover: var(--brand-interactive-light) !default;
+// $button-primary-ghost-bg-color-hover: var(--brand-color-primary-070) !default;
+// $button-primary-ghost-border-color: var(--brand-color-primary-010) !default;
+// $button-primary-ghost-border-color-hover: var(--brand-color-primary-070) !default;
+// $button-primary-ghost-outline-color: var(--brand-outline-light) !default;
 
-$button-primary-ghost-color-on-light: $brand-interactive-dark !default;
-$button-primary-ghost-color-on-light-hover: $brand-interactive-light !default;
-$button-primary-ghost-bg-color-on-light-hover: $brand-color-primary-070 !default;
-$button-primary-ghost-border-color-on-light: $brand-color-primary-100 !default;
-$button-primary-ghost-border-color-on-light-hover: $brand-color-primary-070 !default;
-$button-primary-ghost-outline-color-on-light: $brand-outline-dark !default;
+// $button-primary-ghost-color-on-light: var(--brand-interactive-dark) !default;
+// $button-primary-ghost-color-on-light-hover: var(--brand-interactive-light) !default;
+// $button-primary-ghost-bg-color-on-light-hover: var(--brand-color-primary-070) !default;
+// $button-primary-ghost-border-color-on-light: var(--brand-color-primary-100) !default;
+// $button-primary-ghost-border-color-on-light-hover: var(--brand-color-primary-070) !default;
+// $button-primary-ghost-outline-color-on-light: var(--brand-outline-dark) !default;
 
 $button-ghost-border-width: 3px !default;
 
@@ -45,20 +47,20 @@ $button-ghost-border-width: 3px !default;
    ========================================================================== */
 
 .c-btn--primary {
-  background-color: $button-primary-bg-color;
+  background-color: var(--brand-button-bg-primary);
 
   &,
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
-    color: $button-primary-color;
+    color: var(--brand-button-text-primary);
   }
 
   &:hover,
   &:focus {
-    background-color: $button-primary-bg-color-hover;
-    outline-color: $button-primary-outline-color;
+    background-color: var(--brand-button-bg-primary-action);
+    outline-color: var(--brand-button-outline-primary);
   }
 }
 
@@ -77,7 +79,8 @@ $button-ghost-border-width: 3px !default;
    ========================================================================== */
 
 .c-btn--ghost {
-  border: $button-ghost-border-width solid $button-primary-ghost-border-color;
+  border: $button-ghost-border-width solid
+    var(--brand-ghost-button-border-primary);
   padding: ($inuit-global-spacing-unit-small - $button-ghost-border-width)
     ($inuit-global-spacing-unit - $button-ghost-border-width);
   transition: border-color $global-transition, color $global-transition,
@@ -90,7 +93,7 @@ $button-ghost-border-width: 3px !default;
   &:hover,
   &:active,
   &:focus {
-    background-color: $button-primary-ghost-bg-color-hover;
+    background-color: var(--brand-ghost-button-bg-primary-action);
   }
 
   &.c-btn--small {
@@ -104,37 +107,38 @@ $button-ghost-border-width: 3px !default;
   }
 
   &.c-btn--primary {
-    color: $button-primary-ghost-color;
+    color: var(--brand-ghost-button-text-primary);
 
     &:hover,
     &:focus {
-      border-color: $button-primary-ghost-border-color-hover;
-      color: $button-primary-ghost-color-hover;
-      outline-color: $button-primary-ghost-outline-color;
+      border-color: var(--brand-ghost-button-border-primary-action);
+      color: var(--brand-ghost-button-text-primary-action);
+      outline-color: var(--brand-ghost-button-outline-primary);
     }
   }
 }
 
-.u-surface-primary-light {
+.u-surface-primary-alt {
   .c-btn--primary {
-    background-color: $button-primary-bg-color-on-light;
+    background-color: var(--brand-button-bg-primary-alt);
 
     &,
     &:hover,
     &:active,
     &:focus {
-      color: $button-primary-color-on-light;
+      text-decoration: none;
+      color: var(--brand-button-text-primary-alt);
     }
 
     &:hover,
     &:focus {
-      background-color: $button-primary-bg-color-on-light-hover;
-      outline-color: $button-primary-outline-color-on-light;
+      background-color: var(--brand-button-bg-primary-action-alt);
+      outline-color: var(--brand-button-outline-primary-alt);
     }
   }
 
   .c-btn--ghost {
-    border-color: $button-primary-ghost-border-color-on-light;
+    border-color: var(--brand-ghost-button-border-primary-alt);
 
     & {
       background: none;
@@ -143,18 +147,17 @@ $button-ghost-border-width: 3px !default;
     &:hover,
     &:active,
     &:focus {
-      color: $button-primary-ghost-color-on-light-hover;
-      background-color: $button-primary-ghost-bg-color-on-light-hover;
+      background-color: var(--brand-ghost-button-bg-primary-action-alt);
     }
 
     &.c-btn--primary {
-      color: $button-primary-ghost-color-on-light;
+      color: var(--brand-ghost-button-text-primary-alt);
 
       &:hover,
       &:focus {
-        border-color: $button-primary-ghost-border-color-on-light-hover;
-        color: $button-primary-ghost-color-on-light-hover;
-        outline-color: $button-primary-ghost-outline-color-on-light;
+        border-color: var(--brand-ghost-button-border-primary-action-alt);
+        color: var(--brand-ghost-button-text-primary-action-alt);
+        outline-color: var(--brand-ghost-button-outline-primary-alt);
       }
     }
   }

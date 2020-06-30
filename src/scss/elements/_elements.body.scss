@@ -13,6 +13,6 @@ body {
   // }
   font-style: $global-font-style-normal;
   font-weight: $global-font-weight-regular;
-  background-color: $brand-surface-primary;
-  color: $brand-light;
+  background-color: var(--brand-surface-primary);
+  color: var(--brand-text-primary);
 }

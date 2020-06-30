@@ -3,11 +3,11 @@
    ========================================================================== */
 
 .u-surface-primary {
-  background-color: $brand-surface-primary;
-  color: $brand-light;
+  background-color: var(--brand-surface-primary);
+  color: var(--brand-text-primary);
 }
 
-.u-surface-primary-light {
-  background-color: $brand-surface-primary-light;
-  color: $brand-dark;
+.u-surface-primary-alt {
+  background-color: var(--brand-surface-primary-alt);
+  color: var(--brand-text-primary-alt);
 }
