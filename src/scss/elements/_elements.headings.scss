@@ -2,12 +2,12 @@
    #HEADINGS
    ========================================================================== */
 
-$inuit-font-size-h1: $heading-scale-one !default;
-$inuit-font-size-h2: $heading-scale-two !default;
-$inuit-font-size-h3: $heading-scale-three !default;
-$inuit-font-size-h4: $heading-scale-four !default;
-$inuit-font-size-h5: $heading-scale-five !default;
-$inuit-font-size-h6: $heading-scale-six !default;
+$inuit-font-size-h1: $global-font-size-heading-1 !default;
+$inuit-font-size-h2: $global-font-size-heading-2 !default;
+$inuit-font-size-h3: $global-font-size-heading-3 !default;
+$inuit-font-size-h4: $global-font-size-heading-4 !default;
+$inuit-font-size-h5: $global-font-size-heading-5 !default;
+$inuit-font-size-h6: $global-font-size-heading-6 !default;
 
 h1,
 h2,
@@ -16,58 +16,58 @@ h4,
 h5,
 h6 {
   @if $custom-fonts == true {
-    font-family: "Inter";
+    font-family: $global-font-family-primary;
   }
-  font-style: normal;
-  font-weight: 400;
+  font-style: $global-font-family-primary;
+  font-weight: $global-font-weight-regular;
 }
 
 h1 {
-  @include inuit-font-size($inuit-font-size-h1);
+  @include inuit-font-size($global-font-size-heading-1);
 }
 
 h2 {
-  @include inuit-font-size($inuit-font-size-h2);
+  @include inuit-font-size($global-font-size-heading-2);
 }
 
 h3 {
-  @include inuit-font-size($inuit-font-size-h3);
+  @include inuit-font-size($global-font-size-heading-3);
 }
 
 h4 {
-  @include inuit-font-size($inuit-font-size-h4);
+  @include inuit-font-size($global-font-size-heading-4);
 }
 
 h5 {
-  @include inuit-font-size($inuit-font-size-h5);
+  @include inuit-font-size($global-font-size-heading-5);
 }
 
 h6 {
-  @include inuit-font-size($inuit-font-size-h6);
+  @include inuit-font-size($global-font-size-heading-6);
 }
 
-@if $inuit-fluid-font-size == true {
-  h1 {
-    @include inuit-fluid-font-size($inuit-font-size-h1);
-  }
+// @if $inuit-fluid-font-size == true {
+//   h1 {
+//     @include inuit-fluid-font-size($inuit-font-size-h1);
+//   }
 
-  h2 {
-    @include inuit-fluid-font-size($inuit-font-size-h2);
-  }
+//   h2 {
+//     @include inuit-fluid-font-size($inuit-font-size-h2);
+//   }
 
-  h3 {
-    @include inuit-fluid-font-size($inuit-font-size-h3);
-  }
+//   h3 {
+//     @include inuit-fluid-font-size($inuit-font-size-h3);
+//   }
 
-  h4 {
-    @include inuit-fluid-font-size($inuit-font-size-h4);
-  }
+//   h4 {
+//     @include inuit-fluid-font-size($inuit-font-size-h4);
+//   }
 
-  h5 {
-    @include inuit-fluid-font-size($inuit-font-size-h5);
-  }
+//   h5 {
+//     @include inuit-fluid-font-size($inuit-font-size-h5);
+//   }
 
-  h6 {
-    @include inuit-fluid-font-size($inuit-font-size-h6);
-  }
-}
+//   h6 {
+//     @include inuit-fluid-font-size($inuit-font-size-h6);
+//   }
+// }

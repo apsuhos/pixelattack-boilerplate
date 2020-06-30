@@ -3,91 +3,45 @@
    ========================================================================== */
 
 .u-h1 {
-  @include inuit-font-size($inuit-font-size-h1);
+  @include inuit-font-size($global-font-size-heading-1);
 }
 
 .u-h2 {
-  @include inuit-font-size($inuit-font-size-h2);
+  @include inuit-font-size($global-font-size-heading-2);
 }
 
 .u-h3 {
-  @include inuit-font-size($inuit-font-size-h3);
+  @include inuit-font-size($global-font-size-heading-3);
 }
 
 .u-h4 {
-  @include inuit-font-size($inuit-font-size-h4);
+  @include inuit-font-size($global-font-size-heading-4);
 }
 
 .u-h5 {
-  @include inuit-font-size($inuit-font-size-h5);
+  @include inuit-font-size($global-font-size-heading-5);
 }
 
 .u-h6 {
-  @include inuit-font-size($inuit-font-size-h6);
+  @include inuit-font-size($global-font-size-heading-6);
 }
 
-.u-xlarge {
-  @include inuit-font-size($body-scale-xlarge);
+.u-huge {
+  @include inuit-font-size($global-font-size-body-huge);
 }
 
 .u-large {
-  @include inuit-font-size($body-scale-large);
+  @include inuit-font-size($global-font-size-body-large);
 }
 
 .u-regular {
-  @include inuit-font-size($body-scale-regular);
+  @include inuit-font-size($global-font-size-body);
 }
 
 .u-small {
-  @include inuit-font-size($body-scale-small);
+  @include inuit-font-size($global-font-size-body-small);
 }
 
-.u-xsmall {
-  @include inuit-font-size($body-scale-xsmall);
-}
-
-@if $inuit-fluid-font-size == true {
-  .u-h1 {
-    @include inuit-fluid-font-size($inuit-font-size-h1);
-  }
-
-  .u-h2 {
-    @include inuit-fluid-font-size($inuit-font-size-h2);
-  }
-
-  .u-h3 {
-    @include inuit-fluid-font-size($inuit-font-size-h3);
-  }
-
-  .u-h4 {
-    @include inuit-fluid-font-size($inuit-font-size-h4);
-  }
-
-  .u-h5 {
-    @include inuit-fluid-font-size($inuit-font-size-h5);
-  }
-
-  .u-h6 {
-    @include inuit-fluid-font-size($inuit-font-size-h6);
-  }
-
-  .u-xlarge {
-    @include inuit-fluid-font-size($body-scale-xlarge);
-  }
-
-  .u-large {
-    @include inuit-fluid-font-size($body-scale-large);
-  }
-
-  .u-regular {
-    @include inuit-fluid-font-size($body-scale-regular);
-  }
-
-  .u-small {
-    @include inuit-fluid-font-size($body-scale-small);
-  }
-
-  .u-xsmall {
-    @include inuit-fluid-font-size($body-scale-xsmall);
-  }
+.u-tiny {
+  @include inuit-font-size($global-font-size-body-tiny);
 }

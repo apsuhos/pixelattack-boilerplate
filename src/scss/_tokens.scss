@@ -1,0 +1,105 @@
+/* ==========================================================================
+   #TOKENS
+   ========================================================================== */
+
+// Colors
+$brand-color-primary-010: #f0f5fc !default;
+$brand-color-primary-020: #cfe0fc !default;
+$brand-color-primary-030: #accbfc !default;
+$brand-color-primary-040: #84b1fa !default;
+$brand-color-primary-050: #5691f0 !default;
+$brand-color-primary-060: #3272d9 !default;
+$brand-color-primary-070: #1d5bbf !default;
+$brand-color-primary-080: #114599 !default;
+$brand-color-primary-090: #103570 !default;
+$brand-color-primary-100: #15233b !default;
+
+// $brand-color-primary-010: #d7faf8 !default;
+// $brand-color-primary-020: #83f2eb !default;
+// $brand-color-primary-030: #43ded3 !default;
+// $brand-color-primary-040: #43ded3 !default;
+// $brand-color-primary-050: #0ea197 !default;
+// $brand-color-primary-060: #08827a !default;
+// $brand-color-primary-070: #086962 !default;
+// $brand-color-primary-080: #09524d !default;
+// $brand-color-primary-090: #0a3d3a !default;
+// $brand-color-primary-100: #0a2b29 !default;
+
+$global-color-grey-010: #f5f7fa !default;
+$global-color-grey-020: #ebeff5 !default;
+$global-color-grey-030: #dde3ed !default;
+$global-color-grey-040: #c8d1e0 !default;
+$global-color-grey-050: #afbacc !default;
+$global-color-grey-060: #8e99ab !default;
+$global-color-grey-070: #707a8a !default;
+$global-color-grey-080: #58606e !default;
+$global-color-grey-090: #434a54 !default;
+$global-color-grey-100: #333840 !default;
+
+$global-color-success-010: #e1faeb !default;
+$global-color-success-020: #056b2e !default;
+$global-color-success-030: #075426 !default;
+
+$global-color-error-010: #faf0f0 !default;
+$global-color-error-020: #b80d0d !default;
+$global-color-error-030: #8f0e0e !default;
+
+// Font family
+$global-fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$global-font-weight-regular: 400 !default;
+$global-font-style-normal: normal !default;
+
+$global-font-family-primary: "Abril Fatface" !default;
+$global-font-family-primary-src: 
+  local("Abril Fatface"), local("AbrilFatface-Regular"),
+  url("../fonts/abril-fatface/abril-fatface-400.woff2") format("woff2"),
+  url("../fonts/abril-fatface/abril-fatface-400.woff") format("woff"),
+  url("../fonts/abril-fatface/abril-fatface-400.ttf") format("truetype") !default;
+
+$global-font-family-secondary: "Poppins" !default;
+$global-font-family-secondary-src:
+  local("Poppins Regular"), local("Poppins-Regular"),
+  url("../fonts/poppins/poppins-400.woff2") format("woff2"),
+  url("../fonts/poppins/poppins-400.woff") format("woff"),
+  url("../fonts/poppins/poppins-400.ttf") format("truetype") !default;
+
+// Font-sizes
+$global-font-size-heading-1: 64px !default;
+$global-font-size-heading-2: 53.333px !default;
+$global-font-size-heading-3: 44.444px !default;
+$global-font-size-heading-4: 37.037px !default;
+$global-font-size-heading-5: 30.864px !default;
+$global-font-size-heading-6: 25.72px !default;
+
+$global-font-size-body-huge: 23.04px !default;
+$global-font-size-body-large: 19.2px !default;
+$global-font-size-body: 16px !default; // THIS SHOULD BE SET BASED ON $inuit-global-font-size
+$global-font-size-body-small: 13.333px !default;
+$global-font-size-body-tiny: 11.111px !default;
+
+$global-baseline: 7px !default;
+
+$global-spacing-unit-factor-tiny: 1 !default;
+$global-spacing-unit-factor-small: 2 !default;
+$global-spacing-unit-factor: 4 !default;
+$global-spacing-unit-factor-large: 8 !default;
+$global-spacing-unit-factor-huge: 16 !default;
+
+$global-border-radius: 6px !default;
+$global-line-width: 3px !default;
+
+$global-transition: 150ms ease-in-out !default;
+
+$global-outline-width: 3px !default;
+$global-outline-style: solid !default;
+$global-focus-offset: 3px !default;
+
+$global-breakpoint-mobile: 320px !default;
+$global-breakpoint-large-mobile: 540px !default;
+$global-breakpoint-tablet: 760px !default;
+$global-breakpoint-large-tablet: 980px !default;
+$global-breakpoint-desktop: 1200px !default;
+$global-breakpoint-large-desktop: 1420px !default;
+$global-breakpoint-tvscreen: 1640px !default;
+$global-breakpoint-large-tvscreen: 1860px !default;

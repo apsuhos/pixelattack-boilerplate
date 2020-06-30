@@ -2,18 +2,17 @@
    #BODY
    ========================================================================== */
 
-$body-color: var(--primary-90) !default;
-
 body {
-  font-family: $font-system;
+  font-family: $global-fonts-system;
   @if $custom-fonts == true {
-    font-family: "Inter";
+    font-family: $global-font-family-secondary;
   }
   font-size: $inuit-global-font-size;
-  @if $inuit-fluid-font-size == true {
-    @include inuit-fluid-font-size($inuit-global-font-size);
-  }
-  font-style: normal;
-  font-weight: 400;
-  color: $body-color;
+  // @if $inuit-fluid-font-size == true {
+  //   @include inuit-fluid-font-size($inuit-global-font-size);
+  // }
+  font-style: $global-font-style-normal;
+  font-weight: $global-font-weight-regular;
+  background-color: $brand-surface-primary;
+  color: $brand-light;
 }
