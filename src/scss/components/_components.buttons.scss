@@ -2,33 +2,6 @@
    #BUTTONS
    ========================================================================== */
 
-// Button colors
-// $button-primary-color: var(--brand-interactive-light) !default;
-// $button-primary-bg-color: var(--brand-color-primary-060) !default;
-// $button-primary-bg-color-hover: var(--brand-color-primary-070) !default;
-// $button-primary-outline-color: var(--brand-outline-light) !default;
-
-// $button-primary-color-on-light: var(--brand-interactive-light) !default;
-// $button-primary-bg-color-on-light: var(--brand-color-primary-060) !default;
-// $button-primary-bg-color-on-light-hover: var(
-//   --brand-color-primary-070
-// ) !default;
-// $button-primary-outline-color-on-light: var(--brand-outline-dark) !default;
-
-// $button-primary-ghost-color: var(--brand-interactive-light) !default;
-// $button-primary-ghost-color-hover: var(--brand-interactive-light) !default;
-// $button-primary-ghost-bg-color-hover: var(--brand-color-primary-070) !default;
-// $button-primary-ghost-border-color: var(--brand-color-primary-010) !default;
-// $button-primary-ghost-border-color-hover: var(--brand-color-primary-070) !default;
-// $button-primary-ghost-outline-color: var(--brand-outline-light) !default;
-
-// $button-primary-ghost-color-on-light: var(--brand-interactive-dark) !default;
-// $button-primary-ghost-color-on-light-hover: var(--brand-interactive-light) !default;
-// $button-primary-ghost-bg-color-on-light-hover: var(--brand-color-primary-070) !default;
-// $button-primary-ghost-border-color-on-light: var(--brand-color-primary-100) !default;
-// $button-primary-ghost-border-color-on-light-hover: var(--brand-color-primary-070) !default;
-// $button-primary-ghost-outline-color-on-light: var(--brand-outline-dark) !default;
-
 $button-ghost-border-width: 3px !default;
 
 .c-btn {
@@ -43,8 +16,12 @@ $button-ghost-border-width: 3px !default;
   border-radius: $global-border-radius;
 }
 
-/* Style variants
-   ========================================================================== */
+.c-btn--primary {
+  --brand-button-bg-primary: var(--brand-color-primary-060);
+  --brand-button-bg-primary-action: var(--brand-color-primary-070);
+  --brand-button-text-primary: var(--global-color-white);
+  --brand-button-outline-primary: var(--brand-color-primary-100);
+}
 
 .c-btn--primary {
   background-color: var(--brand-button-bg-primary);
@@ -64,9 +41,6 @@ $button-ghost-border-width: 3px !default;
   }
 }
 
-/* Size variants
-   ========================================================================== */
-
 .c-btn--small {
   padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
 }
@@ -79,21 +53,14 @@ $button-ghost-border-width: 3px !default;
    ========================================================================== */
 
 .c-btn--ghost {
-  border: $button-ghost-border-width solid
-    var(--brand-ghost-button-border-primary);
   padding: ($inuit-global-spacing-unit-small - $button-ghost-border-width)
     ($inuit-global-spacing-unit - $button-ghost-border-width);
   transition: border-color $global-transition, color $global-transition,
     background-color $global-transition;
+  border: $button-ghost-border-width solid;
 
   & {
     background: none;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: var(--brand-ghost-button-bg-primary-action);
   }
 
   &.c-btn--small {
@@ -105,59 +72,75 @@ $button-ghost-border-width: 3px !default;
     padding: ($inuit-global-spacing-unit - $button-ghost-border-width)
       ($inuit-global-spacing-unit-large - $button-ghost-border-width);
   }
+}
 
+.c-btn--ghost {
   &.c-btn--primary {
-    color: var(--brand-ghost-button-text-primary);
+    --brand-button-ghost-border-primary: var(--brand-color-primary-060);
+    --brand-button-ghost-border-primary-action: var(--brand-color-primary-070);
+    --brand-button-ghost-text-primary: var(--brand-color-primary-060);
+    --brand-button-ghost-text-primary-action: var(--global-color-white);
+    --brand-button-ghost-bg-primary-action: var(--brand-color-primary-070);
+  }
+}
+
+.c-btn--ghost {
+  &.c-btn--primary {
+    border-color: var(--brand-button-ghost-border-primary);
+    color: var(--brand-button-ghost-text-primary);
 
     &:hover,
+    &:active,
     &:focus {
-      border-color: var(--brand-ghost-button-border-primary-action);
-      color: var(--brand-ghost-button-text-primary-action);
-      outline-color: var(--brand-ghost-button-outline-primary);
+      background-color: var(--brand-button-ghost-bg-primary-action);
+      border-color: var(--brand-button-ghost-border-primary-action);
+      color: var(--brand-button-ghost-text-primary-action);
     }
   }
 }
 
-.u-surface-primary-alt {
+[data-theme="dark"] {
   .c-btn--primary {
-    background-color: var(--brand-button-bg-primary-alt);
-
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-      color: var(--brand-button-text-primary-alt);
-    }
-
-    &:hover,
-    &:focus {
-      background-color: var(--brand-button-bg-primary-action-alt);
-      outline-color: var(--brand-button-outline-primary-alt);
+    --brand-button-outline-primary: var(--global-color-white);
+  }
+  .u-surface-primary--alt {
+    .c-btn--primary {
+      --brand-button-outline-primary: var(--brand-color-primary-100);
     }
   }
+}
 
+[data-theme="dark"] {
   .c-btn--ghost {
-    border-color: var(--brand-ghost-button-border-primary-alt);
-
-    & {
-      background: none;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: var(--brand-ghost-button-bg-primary-action-alt);
-    }
-
     &.c-btn--primary {
-      color: var(--brand-ghost-button-text-primary-alt);
+      border-color: var(--global-color-white);
+      color: var(--global-color-white);
 
       &:hover,
+      &:active,
       &:focus {
-        border-color: var(--brand-ghost-button-border-primary-action-alt);
-        color: var(--brand-ghost-button-text-primary-action-alt);
-        outline-color: var(--brand-ghost-button-outline-primary-alt);
+        background-color: var(--brand-button-ghost-bg-primary-action);
+        border-color: var(--brand-button-ghost-border-primary-action);
+        color: var(--brand-button-ghost-text-primary-action);
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .u-surface-primary--alt {
+    .c-btn--ghost {
+      &.c-btn--primary {
+        border-color: var(--brand-button-ghost-border-primary);
+        color: var(--brand-button-ghost-text-primary);
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: var(--brand-button-ghost-bg-primary-action);
+          border-color: var(--brand-button-ghost-border-primary-action);
+          color: var(--brand-button-ghost-text-primary-action);
+        }
       }
     }
   }

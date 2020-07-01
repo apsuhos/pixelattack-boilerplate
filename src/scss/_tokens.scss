@@ -36,113 +36,59 @@
   --brand-color-primary-090:  #103570;
   --brand-color-primary-100:  #15233b;
 
+  // --brand-color-primary-010:  #d7faf8;
+  // --brand-color-primary-020:  #83f2eb;
+  // --brand-color-primary-030:  #43ded3;
+  // --brand-color-primary-040:  #43ded3;
+  // --brand-color-primary-050:  #0ea197;
+  // --brand-color-primary-060:  #08827a;
+  // --brand-color-primary-070:  #086962;
+  // --brand-color-primary-080:  #09524d;
+  // --brand-color-primary-090:  #0a3d3a;
+  // --brand-color-primary-100:  #0a2b29;
+
   --brand-surface-primary:                        var(--global-color-white);
-  --brand-surface-primary-alt:                    var(--global-color-white-offset);
-
   --brand-text-primary:                           var(--brand-color-primary-100);
-  --brand-text-primary-alt:                       var(--brand-color-primary-100);
-
   --brand-interactive-primary:                    var(--brand-color-primary-100);
   --brand-interactive-primary-action:             var(--brand-color-primary-100);
   --brand-interactive-box-shadow-primary:         var(--brand-color-primary-050);
-
-  --brand-interactive-primary-alt:                var(--brand-color-primary-100);
-  --brand-interactive-primary-action-alt:         var(--brand-color-primary-100);
-  --brand-interactive-box-shadow-primary-alt:     var(--brand-color-primary-050);
-
   --brand-outline-primary:                        var(--brand-color-primary-100);
-  --brand-outline-primary-alt:                    var(--brand-color-primary-100);
-
-  --brand-button-text-primary:                    var(--global-color-white);
-  --brand-button-bg-primary:                      var(--brand-color-primary-060);
-  --brand-button-bg-primary-action:               var(--brand-color-primary-070);
-  --brand-button-outline-primary:                 var(--brand-color-primary-100);
-
-  --brand-ghost-button-text-primary:              var(--brand-color-primary-100);
-  --brand-ghost-button-text-primary-action:       var(--global-color-white);
-  --brand-ghost-button-bg-primary-action:         var(--brand-color-primary-070);
-  --brand-ghost-button-border-primary:            var(--brand-color-primary-100);
-  --brand-ghost-button-border-primary-action:     var(--brand-color-primary-070);
-  --brand-ghost-button-outline-primary:           var(--brand-color-primary-100);
-
-  --brand-button-text-primary-alt:                var(--global-color-white);
-  --brand-button-bg-primary-alt:                  var(--brand-color-primary-060);
-  --brand-button-bg-primary-action-alt:           var(--brand-color-primary-070);
-  --brand-button-outline-primary-alt:             var(--brand-color-primary-100);
-
-  --brand-ghost-button-text-primary-alt:          var(--brand-color-primary-100);
-  --brand-ghost-button-text-primary-action-alt:   var(--global-color-white);
-  --brand-ghost-button-bg-primary-action-alt:     var(--brand-color-primary-070);
-  --brand-ghost-button-border-primary-alt:        var(--brand-color-primary-100);
-  --brand-ghost-button-border-primary-action-alt: var(--brand-color-primary-070);
-  --brand-ghost-button-outline-primary-alt:       var(--brand-color-primary-100);
 }
 
-[data-theme-color="green"] {
-  --brand-color-primary-010: #d7faf8;
-  --brand-color-primary-020: #83f2eb;
-  --brand-color-primary-030: #43ded3;
-  --brand-color-primary-040: #43ded3;
-  --brand-color-primary-050: #0ea197;
-  --brand-color-primary-060: #08827a;
-  --brand-color-primary-070: #086962;
-  --brand-color-primary-080: #09524d;
-  --brand-color-primary-090: #0a3d3a;
-  --brand-color-primary-100: #0a2b29;
-}
-
-[data-theme-style="dark"] {
+[data-theme="dark"] {
   --brand-surface-primary:                        var(--brand-color-primary-100);
-  --brand-surface-primary-alt:                    var(--brand-color-primary-010);
-
-  --brand-text-primary:                           var(--brand-color-primary-010);
-  --brand-text-primary-alt:                       var(--brand-color-primary-100);
-
-  --brand-interactive-primary:                    var(--brand-color-primary-010);
-  --brand-interactive-primary-action:             var(--brand-color-primary-010);
+  --brand-text-primary:                           var(--global-color-white);
+  --brand-interactive-primary:                    var(--global-color-white);
+  --brand-interactive-primary-action:             var(--global-color-white);
   --brand-interactive-box-shadow-primary:         var(--brand-color-primary-060);
+  --brand-outline-primary:                        var(--global-color-white);
 
-  --brand-interactive-primary-alt:                var(--brand-color-primary-100);
-  --brand-interactive-primary-action-alt:         var(--brand-color-primary-100);
-  --brand-interactive-box-shadow-primary-alt:     var(--brand-color-primary-050);
-
-  --brand-outline-primary:                        var(--brand-color-primary-010);
-  --brand-outline-primary-alt:                    var(--brand-color-primary-100);
-
-  --brand-button-text-primary:                    var(--global-color-white);
-  --brand-button-bg-primary:                      var(--brand-color-primary-060);
-  --brand-button-bg-primary-action:               var(--brand-color-primary-070);
-  --brand-button-outline-primary:                 var(--brand-color-primary-010);
-
-  --brand-ghost-button-text-primary:              var(--global-color-white);
-  --brand-ghost-button-text-primary-action:       var(--global-color-white);
-  --brand-ghost-button-bg-primary-action:         var(--brand-color-primary-070);
-  --brand-ghost-button-border-primary:            var(--global-color-white);
-  --brand-ghost-button-border-primary-action:     var(--brand-color-primary-070);
-  --brand-ghost-button-outline-primary:           var(--brand-color-primary-010);
-
-  --brand-button-text-primary-alt:                var(--global-color-white);
-  --brand-button-bg-primary-alt:                  var(--brand-color-primary-060);
-  --brand-button-bg-primary-action-alt:           var(--brand-color-primary-070);
-  --brand-button-outline-primary-alt:             var(--brand-color-primary-100);
-
-  --brand-ghost-button-text-primary-alt:          var(--brand-color-primary-100);
-  --brand-ghost-button-text-primary-action-alt:   var(--global-color-white);
-  --brand-ghost-button-bg-primary-action-alt:     var(--brand-color-primary-070);
-  --brand-ghost-button-border-primary-alt:        var(--brand-color-primary-100);
-  --brand-ghost-button-border-primary-action-alt: var(--brand-color-primary-070);
-  --brand-ghost-button-outline-primary-alt:       var(--brand-color-primary-100);
 }
 
+::selection {
+  background: var(--brand-color-primary-100);
+  color:  var(--global-color-white);
+}
 
+[data-theme="dark"] {
+  ::selection {
+    background: var(--global-color-white);
+    color: var(--brand-color-primary-100);
+  }
+  .u-surface-primary--alt {
+    ::selection {
+      background: var(--brand-color-primary-100);
+      color: var(--global-color-white);
+    }
+  }
+}
 
 // Font family
-$global-fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$global-fonts-system:         -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$global-font-weight-regular:  400 !default;
+$global-font-style-normal:    normal !default;
 
-$global-font-weight-regular: 400 !default;
-$global-font-style-normal: normal !default;
-
-$global-font-family-primary: "Abril Fatface" !default;
+$global-font-family-primary:  "Abril Fatface" !default;
 $global-font-family-primary-src: 
   local("Abril Fatface"), local("AbrilFatface-Regular"),
   url("../fonts/abril-fatface/abril-fatface-400.woff2") format("woff2"),
@@ -157,41 +103,40 @@ $global-font-family-secondary-src:
   url("../fonts/poppins/poppins-400.ttf") format("truetype") !default;
 
 // Font-sizes
-$global-font-size-heading-1: 64px !default;
-$global-font-size-heading-2: 53.333px !default;
-$global-font-size-heading-3: 44.444px !default;
-$global-font-size-heading-4: 37.037px !default;
-$global-font-size-heading-5: 30.864px !default;
-$global-font-size-heading-6: 25.72px !default;
+$global-font-size-heading-1: 64px       !default;
+$global-font-size-heading-2: 53.333px   !default;
+$global-font-size-heading-3: 44.444px   !default;
+$global-font-size-heading-4: 37.037px   !default;
+$global-font-size-heading-5: 30.864px   !default;
+$global-font-size-heading-6: 25.72px    !default;
 
-$global-font-size-body-huge: 23.04px !default;
-$global-font-size-body-large: 19.2px !default;
-$global-font-size-body: 16px !default; // THIS SHOULD BE SET BASED ON $inuit-global-font-size
-$global-font-size-body-small: 13.333px !default;
-$global-font-size-body-tiny: 11.111px !default;
+$global-font-size-body-huge:  23.04px   !default;
+$global-font-size-body-large: 19.2px    !default;
+$global-font-size-body:       16px      !default; // THIS SHOULD BE SET BASED ON $inuit-global-font-size
+$global-font-size-body-small: 13.333px  !default;
+$global-font-size-body-tiny:  11.111px  !default;
 
 $global-baseline: 7px !default;
 
-$global-spacing-unit-factor-tiny: 1 !default;
-$global-spacing-unit-factor-small: 2 !default;
-$global-spacing-unit-factor: 4 !default;
-$global-spacing-unit-factor-large: 8 !default;
-$global-spacing-unit-factor-huge: 16 !default;
+$global-spacing-unit-factor-tiny:    1 !default;
+$global-spacing-unit-factor-small:   2 !default;
+$global-spacing-unit-factor:         4 !default;
+$global-spacing-unit-factor-large:   8 !default;
+$global-spacing-unit-factor-huge:   16 !default;
 
-$global-border-radius: 6px !default;
-$global-line-width: 3px !default;
-
-$global-transition: 150ms ease-in-out !default;
+$global-border-radius:  6px !default;
+$global-line-width:     3px !default;
+$global-transition:     150ms ease-in-out !default;
 
 $global-outline-width: 3px !default;
 $global-outline-style: solid !default;
 $global-focus-offset: 3px !default;
 
-$global-breakpoint-mobile: 320px !default;
-$global-breakpoint-large-mobile: 540px !default;
-$global-breakpoint-tablet: 760px !default;
-$global-breakpoint-large-tablet: 980px !default;
-$global-breakpoint-desktop: 1200px !default;
-$global-breakpoint-large-desktop: 1420px !default;
-$global-breakpoint-tvscreen: 1640px !default;
-$global-breakpoint-large-tvscreen: 1860px !default;
+$global-breakpoint-mobile:          320px   !default;
+$global-breakpoint-large-mobile:    540px   !default;
+$global-breakpoint-tablet:          760px   !default;
+$global-breakpoint-large-tablet:    980px   !default;
+$global-breakpoint-desktop:         1200px  !default;
+$global-breakpoint-large-desktop:   1420px  !default;
+$global-breakpoint-tvscreen:        1640px  !default;
+$global-breakpoint-large-tvscreen:  1860px  !default;

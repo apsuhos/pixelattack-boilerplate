@@ -25,18 +25,8 @@ a:hover:not(.c-btn) {
   box-shadow: inset 0 -1.4rem 0 var(--brand-interactive-box-shadow-primary);
 }
 
-.u-surface-primary-alt {
-  a:not(.c-btn) {
-    color: var(--brand-interactive-primary-alt);
-    box-shadow: inset 0 -0.1rem 0 var(--brand-interactive-box-shadow-primary-alt);
-  }
-
-  a:focus:not(.c-btn) {
-    outline-color: var(--brand-outline-primary-alt);
-  }
-
-  a:focus:not(.c-btn),
-  a:hover:not(.c-btn) {
-    box-shadow: inset 0 -1.4rem 0 var(--brand-interactive-box-shadow-primary-alt);
-  }
+.u-surface-primary--alt {
+  --brand-interactive-primary: var(--brand-color-primary-100);
+  --brand-interactive-box-shadow-primary: var(--brand-color-primary-050);
+  --brand-outline-primary: var(--brand-color-primary-100);
 }
