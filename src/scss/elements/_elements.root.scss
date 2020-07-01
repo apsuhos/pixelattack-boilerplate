@@ -1,6 +1,25 @@
 /* ==========================================================================
    #ROOT
    ========================================================================== */
+
+::selection {
+  background: var(--brand-color-primary-100);
+  color: var(--global-color-white);
+}
+
+[data-theme="dark"] {
+  ::selection {
+    background: var(--global-color-white);
+    color: var(--brand-color-primary-100);
+  }
+  .u-surface-primary--alt {
+    ::selection {
+      background: var(--brand-color-primary-100);
+      color: var(--global-color-white);
+    }
+  }
+}
+
 @if $custom-fonts == true {
   @font-face {
     font-family: $global-font-family-primary;
