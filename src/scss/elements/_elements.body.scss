@@ -3,16 +3,23 @@
    ========================================================================== */
 
 body {
+  --brand-surface-primary: var(--global-color-white-offset);
+  --brand-text-primary: var(--brand-color-primary-100);
+}
+
+[data-theme="dark"] body {
+  --brand-surface-primary: var(--brand-color-primary-100);
+  --brand-text-primary: var(--global-color-white);
+}
+
+body {
   font-family: $global-fonts-system;
   @if $custom-fonts == true {
-    font-family: $global-font-family-secondary;
+    font-family: $global-font-family-primary;
   }
   font-size: $inuit-global-font-size;
-  // @if $inuit-fluid-font-size == true {
-  //   @include inuit-fluid-font-size($inuit-global-font-size);
-  // }
-  font-style: $global-font-style-normal;
-  font-weight: $global-font-weight-regular;
+  font-style: normal;
+  font-weight: 400;
   background-color: var(--brand-surface-primary);
   color: var(--brand-text-primary);
 }

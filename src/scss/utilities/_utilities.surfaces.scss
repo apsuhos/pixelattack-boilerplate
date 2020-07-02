@@ -3,17 +3,31 @@
    ========================================================================== */
 
 .u-surface-primary {
+  --brand-surface-primary: var(--global-color-white-offset);
+  --brand-text-primary: var(--brand-color-primary-100);
+}
+
+[data-theme="dark"] .u-surface-primary {
+  --brand-surface-primary: var(--brand-color-primary-100);
+  --brand-text-primary: var(--global-color-white);
+}
+
+.u-surface-primary {
   background-color: var(--brand-surface-primary);
   color: var(--brand-text-primary);
 }
 
-.u-surface-primary--alt {
+.u-surface-light-primary {
   --brand-surface-primary: var(--global-color-white);
   --brand-text-primary: var(--brand-color-primary-100);
 }
 
-[data-theme="dark"] {
-  .u-surface-primary--alt {
-    --brand-surface-primary: var(--brand-color-primary-010);
-  }
+[data-theme="dark"] .u-surface-light-primary {
+  --brand-surface-primary: var(--brand-color-primary-010);
+  --brand-text-primary: var(--brand-color-primary-100);
+}
+
+.u-surface-light-primary {
+  background-color: var(--brand-surface-primary);
+  color: var(--brand-text-primary);
 }

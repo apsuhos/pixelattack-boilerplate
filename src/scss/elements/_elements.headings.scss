@@ -18,8 +18,8 @@ h6 {
   @if $custom-fonts == true {
     font-family: $global-font-family-primary;
   }
-  font-style: $global-font-family-primary;
-  font-weight: $global-font-weight-regular;
+  font-style: normal;
+  font-weight: 400;
 }
 
 h1 {
@@ -45,29 +45,3 @@ h5 {
 h6 {
   @include inuit-font-size($global-font-size-heading-6);
 }
-
-// @if $inuit-fluid-font-size == true {
-//   h1 {
-//     @include inuit-fluid-font-size($inuit-font-size-h1);
-//   }
-
-//   h2 {
-//     @include inuit-fluid-font-size($inuit-font-size-h2);
-//   }
-
-//   h3 {
-//     @include inuit-fluid-font-size($inuit-font-size-h3);
-//   }
-
-//   h4 {
-//     @include inuit-fluid-font-size($inuit-font-size-h4);
-//   }
-
-//   h5 {
-//     @include inuit-fluid-font-size($inuit-font-size-h5);
-//   }
-
-//   h6 {
-//     @include inuit-fluid-font-size($inuit-font-size-h6);
-//   }
-// }

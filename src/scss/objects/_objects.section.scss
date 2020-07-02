@@ -3,8 +3,6 @@
    ========================================================================== */
 
 $inuit-section-breakpoint: map-get($mq-breakpoints, wide) !default;
-// The result of this multiplication must be multiple of the global-baseline-grid
-// for the vertical rhythm not to break
 $inuit-section-huge-factor: 1.25 !default;
 
 .o-section {

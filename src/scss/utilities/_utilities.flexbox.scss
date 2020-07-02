@@ -187,7 +187,7 @@ $flex-wrap-values: (
 
     // Build it.
     #{$rule} {
-      wrap: $flex-wrap-value !important;
+      flex-wrap: $flex-wrap-value !important;
     }
   }
 }

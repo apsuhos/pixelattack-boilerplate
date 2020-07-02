@@ -2,6 +2,19 @@
    #COLORS
    ========================================================================== */
 
+.u-global-color-white {
+  color: var(--global-color-white) !important;
+}
+.u-global-color-black {
+  color: var(--global-color-black) !important;
+}
+.u-global-color-white-offset {
+  color: var(--global-color-white-offset) !important;
+}
+.u-global-color-black-offset {
+  color: var(--global-color-black-offset) !important;
+}
+
 .u-brand-color-primary-010 {
   color: var(--brand-color-primary-010) !important;
 }
@@ -32,6 +45,7 @@
 .u-brand-color-primary-100 {
   color: var(--brand-color-primary-100) !important;
 }
+
 .u-brand-color-neutral-010 {
   color: var(--global-color-neutral-010) !important;
 }
@@ -62,6 +76,7 @@
 .u-brand-color-neutral-100 {
   color: var(--global-color-neutral-100) !important;
 }
+
 .u-brand-color-success-010 {
   color: var(--global-color-success-010) !important;
 }
@@ -71,6 +86,7 @@
 .u-brand-color-success-030 {
   color: var(--global-color-success-030) !important;
 }
+
 .u-brand-color-error-010 {
   color: var(--global-color-error-010) !important;
 }

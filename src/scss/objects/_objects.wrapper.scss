@@ -72,18 +72,13 @@ $inuit-wrapper-huge-width: map-get($mq-breakpoints, l-wide) !default;
   max-width: $inuit-wrapper-huge-width;
 }
 
-.o-wrapper--rm {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 /* Sometimes you need to reuse the wrapper object on a child element that has a
-wrapper object as a parent. The reason maybe because you want to contrain the content
+wrapper object as a parent. The reason may be to contrain the content
 on a specific width. You do not want the child element to have its own padding
 but instead you want to use the padding from the parent element.
 
 If you do not wish to have it centered you can reset the margins by using the .o-wrapper--rm
-variation to remove any horizontal margins.
+variation to remove any horizontal margins or reset the padding by using utility classes e.g u-margin-horizontal-none
 
 <div style="background-color: rebeccapurple;">
   <div class="o-wrapper o-wrapper--large">
@@ -101,6 +96,11 @@ variation to remove any horizontal margins.
 </div>
 
 */
+
+.o-wrapper--rm {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 .o-wrapper {
   .o-wrapper {
