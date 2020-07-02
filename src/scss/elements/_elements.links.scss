@@ -3,10 +3,17 @@
    ========================================================================== */
 
 a:not(.c-btn) {
+  --brand-interactive-primary: var(--brand-color-primary-100);
+  --brand-interactive-primary-action: var(--brand-color-primary-100);
+  --brand-interactive-underline-primary: var(--brand-color-primary-060);
+  --brand-outline-primary: var(--brand-color-primary-100);
+}
+
+a:not(.c-btn) {
   text-decoration: none;
   color: var(--brand-interactive-primary);
-  transition: box-shadow $global-transition;
-  box-shadow: inset 0 -0.1rem 0 var(--brand-interactive-box-shadow-primary);
+  transition: color $global-transition, box-shadow $global-transition;
+  box-shadow: inset 0 -0.1rem 0 var(--brand-interactive-underline-primary);
 }
 
 a:focus {
@@ -21,12 +28,23 @@ a:focus:not(.c-btn) {
 
 a:focus:not(.c-btn),
 a:hover:not(.c-btn) {
+  color: var(--global-color-white);
   text-decoration: none;
-  box-shadow: inset 0 -1.4rem 0 var(--brand-interactive-box-shadow-primary);
+  box-shadow: inset 0 -1.4rem 0 var(--brand-interactive-underline-primary);
 }
 
-.u-surface-primary--alt {
-  --brand-interactive-primary: var(--brand-color-primary-100);
-  --brand-interactive-box-shadow-primary: var(--brand-color-primary-050);
-  --brand-outline-primary: var(--brand-color-primary-100);
+[data-theme="dark"] {
+  a:not(.c-btn) {
+    --brand-interactive-primary: var(--global-color-white);
+    --brand-outline-primary: var(--global-color-white);
+  }
+}
+
+[data-theme="dark"] {
+  .u-surface-primary--alt {
+    a:not(.c-btn) {
+      --brand-interactive-primary: var(--brand-color-primary-100);
+      --brand-outline-primary: var(--brand-color-primary-100);
+    }
+  }
 }

@@ -46,23 +46,6 @@
   // --brand-color-primary-080:  #09524d;
   // --brand-color-primary-090:  #0a3d3a;
   // --brand-color-primary-100:  #0a2b29;
-
-  --brand-surface-primary:                        var(--global-color-white);
-  --brand-text-primary:                           var(--brand-color-primary-100);
-  --brand-interactive-primary:                    var(--brand-color-primary-100);
-  --brand-interactive-primary-action:             var(--brand-color-primary-100);
-  --brand-interactive-box-shadow-primary:         var(--brand-color-primary-050);
-  --brand-outline-primary:                        var(--brand-color-primary-100);
-}
-
-[data-theme="dark"] {
-  --brand-surface-primary:                        var(--brand-color-primary-100);
-  --brand-text-primary:                           var(--global-color-white);
-  --brand-interactive-primary:                    var(--global-color-white);
-  --brand-interactive-primary-action:             var(--global-color-white);
-  --brand-interactive-box-shadow-primary:         var(--brand-color-primary-060);
-  --brand-outline-primary:                        var(--global-color-white);
-
 }
 
 // Font family

@@ -8,6 +8,12 @@
 }
 
 .u-surface-primary--alt {
-  --brand-surface-primary: var(--global-color-white-offset);
+  --brand-surface-primary: var(--global-color-white);
   --brand-text-primary: var(--brand-color-primary-100);
+}
+
+[data-theme="dark"] {
+  .u-surface-primary--alt {
+    --brand-surface-primary: var(--brand-color-primary-010);
+  }
 }

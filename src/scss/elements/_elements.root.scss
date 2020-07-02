@@ -2,6 +2,21 @@
    #ROOT
    ========================================================================== */
 
+@if $custom-fonts == true {
+  @font-face {
+    font-family: $global-font-family-primary;
+    font-style: $global-font-style-normal;
+    font-weight: $global-font-weight-regular;
+    src: $global-font-family-primary-src;
+  }
+  @font-face {
+    font-family: $global-font-family-secondary;
+    font-style: $global-font-style-normal;
+    font-weight: $global-font-weight-regular;
+    src: $global-font-family-secondary-src;
+  }
+}
+
 ::selection {
   background: var(--brand-color-primary-100);
   color: var(--global-color-white);
@@ -20,19 +35,14 @@
   }
 }
 
-@if $custom-fonts == true {
-  @font-face {
-    font-family: $global-font-family-primary;
-    font-style: $global-font-style-normal;
-    font-weight: $global-font-weight-regular;
-    src: $global-font-family-primary-src;
-  }
-  @font-face {
-    font-family: $global-font-family-secondary;
-    font-style: $global-font-style-normal;
-    font-weight: $global-font-weight-regular;
-    src: $global-font-family-secondary-src;
-  }
+html {
+  --brand-surface-primary: var(--global-color-white-offset);
+  --brand-text-primary: var(--brand-color-primary-100);
+}
+
+html[data-theme="dark"] {
+  --brand-surface-primary: var(--brand-color-primary-100);
+  --brand-text-primary: var(--global-color-white);
 }
 
 html {
