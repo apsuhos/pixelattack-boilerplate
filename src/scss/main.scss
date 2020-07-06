@@ -1,20 +1,20 @@
 // SETTINGS
 @import "settings/settings.config";
 
-$custom-fonts:          true;
-$mq-responsive:         true;
-$text-align-direction:  true;
-$displays:              true;
-$inuit-offsets:         true;
+$custom-fonts: true;
+$mq-responsive: true;
+$text-align-direction: true;
+$displays: true;
+$inuit-offsets: true;
 @import "switches";
 
 $global-baseline: 7px;
 
-$global-spacing-unit-factor-tiny:    1;
-$global-spacing-unit-factor-small:   2;
-$global-spacing-unit-factor:         4;
-$global-spacing-unit-factor-large:   8;
-$global-spacing-unit-factor-huge:   16;
+$global-spacing-unit-factor-tiny: 1;
+$global-spacing-unit-factor-small: 2;
+$global-spacing-unit-factor: 4;
+$global-spacing-unit-factor-large: 8;
+$global-spacing-unit-factor-huge: 16;
 
 $global-font-size-heading-1: 64px;
 $global-font-size-heading-2: 53.333px;
@@ -23,56 +23,54 @@ $global-font-size-heading-4: 37.037px;
 $global-font-size-heading-5: 30.864px;
 $global-font-size-heading-6: 25.72px;
 
-$global-font-size-body-huge:  27.648px;
+$global-font-size-body-huge: 27.648px;
 $global-font-size-body-large: 23.04px;
-$global-font-size-body:       19.2px; // $inuit-global-font-size
-$global-font-size-body-small: 16px; 
-$global-font-size-body-tiny:  13.333px;
+$global-font-size-body: 19.2px; // $inuit-global-font-size
+$global-font-size-body-small: 16px;
+$global-font-size-body-tiny: 13.333px;
 
 // $global-font-family-primary:  "Inter";
 
-$global-breakpoint-mobile:          320px;
-$global-breakpoint-large-mobile:    540px;
-$global-breakpoint-tablet:          760px;
-$global-breakpoint-large-tablet:    980px;
-$global-breakpoint-desktop:         1200px;
-$global-breakpoint-large-desktop:   1420px;
-$global-breakpoint-tvscreen:        1640px;
-$global-breakpoint-large-tvscreen:  1860px;
+$global-breakpoint-mobile: 320px;
+$global-breakpoint-large-mobile: 540px;
+$global-breakpoint-tablet: 760px;
+$global-breakpoint-large-tablet: 980px;
+$global-breakpoint-desktop: 1200px;
+$global-breakpoint-large-desktop: 1420px;
+$global-breakpoint-tvscreen: 1640px;
+$global-breakpoint-large-tvscreen: 1860px;
 
-$global-border-radius:  3px;
-$global-transition:     150ms ease-in-out;
+$global-border-radius: 3px;
+$global-transition: 150ms ease-in-out;
 
-$global-outline-width:  3px;
-$global-outline-style:  solid;
-$global-focus-offset:   3px;
+$global-outline-width: 3px;
+$global-outline-style: solid;
+$global-focus-offset: 3px;
 
 @import "tokens";
 
 $inuit-global-baseline: $global-baseline;
 
-$inuit-global-spacing-unit-factor-tiny:   $global-spacing-unit-factor-tiny; 
-$inuit-global-spacing-unit-factor-small:  $global-spacing-unit-factor-small;
-$inuit-global-spacing-unit-factor:        $global-spacing-unit-factor;  
-$inuit-global-spacing-unit-factor-large:  $global-spacing-unit-factor-large;
-$inuit-global-spacing-unit-factor-huge:   $global-spacing-unit-factor-huge; 
+$inuit-global-spacing-unit-factor-tiny: $global-spacing-unit-factor-tiny;
+$inuit-global-spacing-unit-factor-small: $global-spacing-unit-factor-small;
+$inuit-global-spacing-unit-factor: $global-spacing-unit-factor;
+$inuit-global-spacing-unit-factor-large: $global-spacing-unit-factor-large;
+$inuit-global-spacing-unit-factor-huge: $global-spacing-unit-factor-huge;
 
 $inuit-global-font-size: $global-font-size-body;
 @import "settings/settings.core";
 
 // TOOLS
 
-$mq-breakpoints: (
-  mobile:     $global-breakpoint-mobile,
-  l-mobile:   $global-breakpoint-large-mobile,
-  tablet:     $global-breakpoint-tablet,
-  l-tablet:   $global-breakpoint-large-tablet,
-  desktop:    $global-breakpoint-desktop,
-  l-desktop:  $global-breakpoint-large-desktop,
-  wide:       $global-breakpoint-wide,
-  l-wide:     $global-breakpoint-large-wide
-);
-$mq-show-breakpoints: (mobile, l-mobile, tablet, l-tablet, desktop, l-desktop, wide, l-wide); 
+$mq-breakpoints: (mobile: $global-breakpoint-mobile,
+  l-mobile: $global-breakpoint-large-mobile,
+  tablet: $global-breakpoint-tablet,
+  l-tablet: $global-breakpoint-large-tablet,
+  desktop: $global-breakpoint-desktop,
+  l-desktop: $global-breakpoint-large-desktop,
+  wide: $global-breakpoint-wide,
+  l-wide: $global-breakpoint-large-wide);
+$mq-show-breakpoints: (mobile, l-mobile, tablet, l-tablet, desktop, l-desktop, wide, l-wide);
 @import "mq";
 @import "tools/tools.font-size";
 @import "tools/tools.clearfix";
@@ -93,6 +91,7 @@ $mq-show-breakpoints: (mobile, l-mobile, tablet, l-tablet, desktop, l-desktop, w
 @import "elements/elements.tables";
 
 // OBJECTS
+@import "objects/objects.grid";
 @import "objects/objects.layout";
 @import "objects/objects.wrapper";
 
@@ -132,7 +131,22 @@ $button-ghost-border-width: 3px;
 
 $inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12;
 @import "utilities/utilities.widths";
+
+$inuit-spacing-sizes: (null: $inuit-global-spacing-unit,
+  "-tiny": $inuit-global-spacing-unit-tiny,
+  "-small": $inuit-global-spacing-unit-small,
+  "-large": $inuit-global-spacing-unit-large,
+  "-huge": $inuit-global-spacing-unit-huge,
+  "-none": 0,
+  "-auto": auto);
 @import "utilities/utilities.spacings";
 @import "utilities/utilities.responsive-spacings";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
+
+.c-logo {
+  width: 250px;
+  height: 70px;
+  background-color: var(--brand-color-primary-080);
+  border: $global-border-radius;
+}

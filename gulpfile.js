@@ -84,7 +84,7 @@ const cssConfig = {
   sassOptions: {
     outputStyle: 'expanded',
     precision: 2,
-    includePaths: ['node_modules/sass-mq/', 'node_modules/inuitcss/']
+    includePaths: ['node_modules/sass-mq/', 'node_modules/inuitcss/', 'node_modules/inuit-flexgrid/']
   },
   postCSS: [autoprefixer()]
 };
@@ -161,7 +161,11 @@ const imagesConfig = {
     }),
     // https://github.com/svg/svgo#what-it-can-do
     imagemin.svgo({
-      plugins: [{ removeViewBox: true }, { sortAttrs: true }]
+      plugins: [{
+        removeViewBox: true
+      }, {
+        sortAttrs: true
+      }]
     })
   ]
 };
