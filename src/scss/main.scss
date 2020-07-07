@@ -132,13 +132,24 @@ $button-ghost-border-width: 3px;
 $inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12;
 @import "utilities/utilities.widths";
 
+$inuit-spacing-directions: (null: null,
+  "t": "-top",
+  "r": "-right",
+  "b": "-bottom",
+  "l": "-left",
+  "h": "-left""-right",
+  "v": "-top""-bottom",
+);
+$inuit-spacing-properties: ("p": "padding",
+  "m": "margin",
+);
 $inuit-spacing-sizes: (null: $inuit-global-spacing-unit,
-  "-tiny": $inuit-global-spacing-unit-tiny,
-  "-small": $inuit-global-spacing-unit-small,
-  "-large": $inuit-global-spacing-unit-large,
-  "-huge": $inuit-global-spacing-unit-huge,
-  "-none": 0,
-  "-auto": auto);
+  "-t": $inuit-global-spacing-unit-tiny,
+  "-s": $inuit-global-spacing-unit-small,
+  "-l": $inuit-global-spacing-unit-large,
+  "-h": $inuit-global-spacing-unit-huge,
+  "-n": 0,
+  "-a": auto);
 @import "utilities/utilities.spacings";
 @import "utilities/utilities.responsive-spacings";
 @import "utilities/utilities.print";
