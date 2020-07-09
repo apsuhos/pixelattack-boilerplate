@@ -2,46 +2,46 @@
    #TYPOGRAPHY
    ========================================================================== */
 
-.u-h1 {
+.h1 {
   @include inuit-font-size($global-font-size-heading-1);
 }
 
-.u-h2 {
+.h2 {
   @include inuit-font-size($global-font-size-heading-2);
 }
 
-.u-h3 {
+.h3 {
   @include inuit-font-size($global-font-size-heading-3);
 }
 
-.u-h4 {
+.h4 {
   @include inuit-font-size($global-font-size-heading-4);
 }
 
-.u-h5 {
+.h5 {
   @include inuit-font-size($global-font-size-heading-5);
 }
 
-.u-h6 {
+.h6 {
   @include inuit-font-size($global-font-size-heading-6);
 }
 
-.u-huge {
+.text-huge {
   @include inuit-font-size($global-font-size-body-huge);
 }
 
-.u-large {
+.text-large {
   @include inuit-font-size($global-font-size-body-large);
 }
 
-.u-regular {
+.text-regular {
   @include inuit-font-size($global-font-size-body);
 }
 
-.u-small {
+.text-small {
   @include inuit-font-size($global-font-size-body-small);
 }
 
-.u-tiny {
+.text-tiny {
   @include inuit-font-size($global-font-size-body-tiny);
 }
