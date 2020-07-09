@@ -9,25 +9,30 @@ $display-aliases: true !default;
 
 // Optionally, inuitcss can generate display helper classes. E.g.:
 //
-//   .u-display-block
-//   .u-display-inline-block
-//   .u-display-none
+//   .block
+//   .inline-block
 
 $display-values: (
-  none,
-  inline,
-  inline-block,
-  block,
-  flex,
-  inline-flex
+  "hidden": none,
+  "block": block,
+  "flow-root": flow-root,
+  "inline-block": inline-block,
+  "inline": inline,
+  "flex": flex,
+  "inline-flex": inline-flex,
+  "grid": grid,
+  "inline-grid": inline-grid,
+  "table": table,
+  "table-caption": table-caption,
+  "table-cell": table-cell,
 ) !default;
 
 // Optionally, inuitcss can generate display helper aliases. E.g.:
 //
-//   .u-show
-//   .u-hide@tablet
-//   .u-hide
-//   .u-show@tablet
+//   .show
+//   .hide@tablet
+//   .hide
+//   .show@tablet
 
 $display-alias-definitions: (
   none: hide,
@@ -35,14 +40,12 @@ $display-alias-definitions: (
 ) !default;
 
 // A mixin to spit out our display classes.
-//
-//   .u-display-none@tablet
 
 @mixin displays($display-values, $breakpoint: null) {
   // Loop through the display values.
-  @each $display-value in $display-values {
-    // Make a rule in the format `.u-display-block[@<breakpoint>]`.
-    $rule: ".u-display-#{$display-value}#{$breakpoint}";
+  @each $name, $display-value in $display-values {
+    // Make a rule in the format `.block[@<breakpoint>]`.
+    $rule: ".#{$name}#{$breakpoint}";
 
     // Add alias to rule if exists.
     $alias: map-get($display-alias-definitions, $display-value);
