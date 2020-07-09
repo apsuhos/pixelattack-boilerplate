@@ -3,11 +3,15 @@
    ========================================================================== */
 
 $text-align-direction: true !default;
-$text-align-direction-values: (center, left, right) !default;
+$text-align-direction-values: (
+  "text-left": left,
+  "text-right": right,
+  "text-center": center,
+) !default;
 
 @mixin text-align-direction($text-align-direction-values, $breakpoint: null) {
-  @each $text-align-direction-value in $text-align-direction-values {
-    $rule: ".u-ta-#{$text-align-direction-value}#{$breakpoint}";
+  @each $name, $text-align-direction-value in $text-align-direction-values {
+    $rule: ".#{$name}#{$breakpoint}";
     #{$rule} {
       text-align: $text-align-direction-value;
     }
