@@ -11,22 +11,17 @@ $flex-align-self: true !default;
 /* Direction */
 
 $flex-direction-values: (
-  row,            // The direction text is laid out in a line
-  row-reverse,    // Like <row>, but reversed
-  column,         // The direction in which lines of text are stacked
-  column-reverse,  // Like <column>, but reversed
-
-  // Global values
-  inherit,
-  initial,
-  unset
+  "flex-row": row,
+  "flex-row-reverse": row-reverse,
+  "flex-column": column,
+  "flex-column-reverse": column-reverse
 ) !default;
 
 @mixin flex-direction($flex-direction-values, $breakpoint: null) {
   // Loop through the flex-direction values
-  @each $flex-direction-value in $flex-direction-values {
-    // Make a rule in the format `.u-flex-direction-row[@<breakpoint>]`
-    $rule: ".u-flex-direction-#{$flex-direction-value}#{$breakpoint}";
+  @each $name, $flex-direction-value in $flex-direction-values {
+    // Make a rule in the format `.flex-row[@<breakpoint>]`
+    $rule: ".#{$name}#{$breakpoint}";
     // Build it
     #{$rule} {
       flex-direction: $flex-direction-value !important;
@@ -51,40 +46,18 @@ $flex-direction-values: (
 // Justify content
 
 $flex-justify-content-values: (
-  // Positional alignment
-  center,     // Pack items around the center
-  start,      // Pack items from the start
-  end,        // Pack items from the end
-  flex-start, // Pack flex items from the end
-  flex-end,   // Pack flex items from the end
-  left,       // Pack items from the left
-  right,      // Pack items from the right
- 
-  // Normal alignment
-  normal,
-  
-  // Distributed alignment
-  space-between,  // Distribute items evenly. The first item is flush with the start, the last is flush with the end
-  space-around,   // Distribute items evenly. Items have a half-size space on either end
-  space-evenly,   // Distribute items evenly. Items have equal space around them 
-  stretch, // Distribute items evenly. Stretch 'auto'-sized items to fit the container
-
-  // Overflow alignment
-  safe center,
-  unsafe center
-
-  //Global values
-  inherit,
-  initial,
-  unset,
-
+  "justify-start": flex-start,
+  "justify-center": center,
+  "justify-end": flex-end,
+  "justify-between": space-between,
+  "justify-around": space-around
 ) !default;
 
 @mixin flex-justify-content($flex-justify-content-values, $breakpoint: null) {
   // Loop through the justify content values.
-  @each $flex-justify-content-value in $flex-justify-content-values {
-    // Make a rule in the format `.u-flex-justify-content-start[@<breakpoint>]`.
-    $rule: ".u-flex-justify-content-#{$flex-justify-content-value}#{$breakpoint}";
+  @each $name, $flex-justify-content-value in $flex-justify-content-values {
+    // Make a rule in the format `.justify-start[@<breakpoint>]`.
+    $rule: ".#{$name}#{$breakpoint}";
 
     // Build it.
     #{$rule} {
@@ -114,35 +87,18 @@ $flex-justify-content-values: (
 // Align items
 
 $flex-align-items-values: (
-  // Basic keywords 
-  normal, 
-  stretch, 
-
-  // Positional alignment 
-  center,       // Pack items around the center 
-  start,        // Pack items from the start 
-  end,          // Pack items from the end 
-  flex-start,   // Pack flex items from the start 
-  flex-end,     // Pack flex items from the end
-
-  // Baseline alignment
-  baseline, 
-  first baseline, 
-  last baseline,    // Overflow alignment (for positional alignment only) 
-  safe center, 
-  unsafe center, 
-
-  // Global values
-  inherit, 
-  initial, 
-  unset,
+ "items-stretch": stretch,
+ "items-start": flex-start,
+ "items-end": flex-end,
+ "items-center": center,
+ "items-baseline": baseline
 ) !default;
 
 @mixin flex-align-items($flex-align-items-values, $breakpoint: null) {
   // Loop through the align item values.
-  @each $flex-align-items-value in $flex-align-items-values {
-    // Make a rule in the format `.u-flex-align-items-start[@<breakpoint>]`.
-    $rule: ".u-flex-align-items-#{$flex-align-items-value}#{$breakpoint}";
+  @each $name, $flex-align-items-value in $flex-align-items-values {
+    // Make a rule in the format `.items-stretch[@<breakpoint>]`.
+    $rule: ".#{$name}#{$breakpoint}";
 
     // Build it.
     #{$rule} {
@@ -169,21 +125,16 @@ $flex-align-items-values: (
 // Wrap
 
 $flex-wrap-values: (
-  nowrap,
-  wrap,
-  wrap-reverse,
-
-  // Global values
-  inherit,
-  initial,
-  unset
+  "flex-wrap": wrap,
+  "flex-no-wrap": no-wrap,
+  "flex-wrap-reverse": wrap-reverse
 ) !default;
 
 @mixin flex-wrap($flex-wrap-values, $breakpoint: null) {
   // Loop through the wrap values.
-  @each $flex-wrap-value in $flex-wrap-values {
-    // Make a rule in the format `.u-flex-wrap-wrap[@<breakpoint>]`.
-    $rule: ".u-flex-wrap-#{$flex-wrap-value}#{$breakpoint}";
+  @each $name, $flex-wrap-value in $flex-wrap-values {
+    // Make a rule in the format `.flex-wrap[@<breakpoint>]`.
+    $rule: ".#{$name}#{$breakpoint}";
 
     // Build it.
     #{$rule} {
@@ -207,43 +158,21 @@ $flex-wrap-values: (
   }
 }
 
- // Align self
+// Align self
 
 $flex-align-self-values: (
-  // Keyword values 
-  auto, 
-  normal, 
-
-  // Positional alignment 
-  center,     // Put the item around the center 
-  start,      // Put the item at the start 
-  end,        // Put the item at the end 
-  self-start, // Align the item flush at the start 
-  self-end,   // Align the item flush at the end 
-  flex-start, // Put the flex item at the start 
-  flex-end,   // Put the flex item at the end 
-
-  // Baseline alignment 
-  baseline, 
-  first baseline, 
-  last baseline, 
-  stretch,    // Stretch 'auto'-sized items to fit the container 
-
-  // Overflow alignment 
-  safe center, 
-  unsafe center, 
-
-  // Global values 
-  inherit, 
-  initial, 
-  unset
+  "self-auto": auto,
+  "self-start": flex-start,
+  "self-center": center,
+  "self-end": flex-end,
+  "self-stretch": stretch
 ) !default;
 
 @mixin flex-align-self($flex-align-self-values, $breakpoint: null) {
   // Loop through the align-self values.
-  @each $flex-align-self-value in $flex-align-self-values {
-    // Make a rule in the format `.u-flex-align-self-flex-start[@<breakpoint>]`.
-    $rule: ".u-flex-align-self-#{$flex-align-self-value}#{$breakpoint}";
+  @each $name, $flex-align-self-value in $flex-align-self-values {
+    // Make a rule in the format `.self-auto[@<breakpoint>]`.
+    $rule: ".#{$name}#{$breakpoint}";
 
     // Build it.
     #{$rule} {
@@ -262,6 +191,44 @@ $flex-align-self-values: (
     @each $bp-name, $bp-value in $mq-breakpoints {
       @include mq($from: $bp-name) {
         @include flex-align-self($flex-align-self-values, \@#{$bp-name});
+      }
+    }
+  }
+}
+
+// Align content
+
+$flex-align-content-values: (
+  "content-start": flex-start,
+  "content-center": center,
+  "content-end": flex-end,
+  "content-between": space-between,
+  "content-around": space-around
+) !default;
+
+@mixin flex-align-content($flex-align-content-values, $breakpoint: null) {
+  // Loop through the align-content values.
+  @each $name, $flex-align-content-value in $flex-align-content-values {
+    // Make a rule in the format `.content-start[@<breakpoint>]`.
+    $rule: ".#{$name}#{$breakpoint}";
+
+    // Build it.
+    #{$rule} {
+      align-content: $flex-align-content-value !important;
+    }
+  }
+}
+
+// Check if enabled.
+@if $flex-align-content == true {
+  // Global helpers.
+  @include flex-align-content($flex-align-content-values);
+
+  // Responsive helpers.
+  @if (variable-exists(mq-breakpoints)) {
+    @each $bp-name, $bp-value in $mq-breakpoints {
+      @include mq($from: $bp-name) {
+        @include flex-align-content($flex-align-content-values, \@#{$bp-name});
       }
     }
   }
