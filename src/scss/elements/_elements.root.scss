@@ -7,7 +7,7 @@
   --brand-selection-text-primary: var(--global-color-white);
 }
 
-[data-theme="dark"] .u-surface-primary ::selection {
+[data-theme="dark"] ::selection {
   --brand-selection-bg-primary: var(--global-color-white);
   --brand-selection-text-primary: var(--brand-color-primary-100);
 }

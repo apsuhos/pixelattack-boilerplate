@@ -32,8 +32,13 @@ $global-breakpoint-large-desktop:   1420px  !default;
 $global-breakpoint-wide:            1640px  !default;
 $global-breakpoint-large-wide:      1860px  !default;
 
+$global-letter-spacing-wide:   0.025em !default;
+$global-letter-spacing-tight: -0.025em !default;
+
 $global-border-radius:  3px               !default;
 $global-transition:     150ms ease-in-out !default;
+
+$global-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !default;
 
 $global-outline-width:  3px   !default;
 $global-outline-style:  solid !default;
