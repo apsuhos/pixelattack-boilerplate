@@ -1,6 +1,6 @@
-/* ==========================================================================
+/* ===========================================================================
    #LINKS
-   ========================================================================== */
+   =========================================================================== */
 
 a:not(.c-btn) {
   --brand-interactive-color-primary: var(--brand-color-primary-070);
@@ -17,16 +17,16 @@ a:not(.c-btn) {
 }
 
 a:not(.c-btn) {
-  text-decoration: none;
-  color: var(--brand-interactive-color-primary);
-  transition: color $global-transition, box-shadow $global-transition;
   box-shadow: inset 0 -1px 0 var(--brand-interactive-underline-primary);
+  color: var(--brand-interactive-color-primary);
+  text-decoration: none;
+  transition: color $global-transition, box-shadow $global-transition;
 }
 
 a:focus {
-  outline-width: $global-outline-width;
-  outline-style: $global-outline-style;
   outline-offset: $global-focus-offset;
+  outline-style: $global-outline-style;
+  outline-width: $global-outline-width;
 }
 
 a:focus:not(.c-btn) {
@@ -35,7 +35,7 @@ a:focus:not(.c-btn) {
 
 a:focus:not(.c-btn),
 a:hover:not(.c-btn) {
+  box-shadow: inset 0 -2em 0 var(--brand-interactive-underline-primary-action);
   color: var(--global-color-white);
   text-decoration: none;
-  box-shadow: inset 0 -2em 0 var(--brand-interactive-underline-primary-action);
 }
