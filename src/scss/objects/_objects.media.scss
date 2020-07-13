@@ -1,6 +1,6 @@
-/* ==========================================================================
+/* ===========================================================================
    #MEDIA
-   ========================================================================== */
+   =========================================================================== */
 
 .o-media {
   display: flex;
@@ -34,6 +34,7 @@
    ========================================================================== */
 
 .o-media--flush {
+
   > .o-media__img {
     margin-right: 0;
     margin-left: 0;
@@ -41,11 +42,13 @@
 }
 
 .o-media--tiny {
+
   > .o-media__img {
     margin-right: $inuit-global-spacing-unit-tiny;
   }
 
   &.o-media--reverse {
+
     > .o-media__img {
       margin-right: 0;
       margin-left: $inuit-global-spacing-unit-tiny;
@@ -54,11 +57,13 @@
 }
 
 .o-media--small {
+
   > .o-media__img {
     margin-right: $inuit-global-spacing-unit-small;
   }
 
   &.o-media--reverse {
+
     > .o-media__img {
       margin-right: 0;
       margin-left: $inuit-global-spacing-unit-small;
@@ -67,11 +72,13 @@
 }
 
 .o-media--large {
+
   > .o-media__img {
     margin-right: $inuit-global-spacing-unit-large;
   }
 
   &.o-media--reverse {
+
     > .o-media__img {
       margin-right: 0;
       margin-left: $inuit-global-spacing-unit-large;
@@ -80,11 +87,13 @@
 }
 
 .o-media--huge {
+
   > .o-media__img {
     margin-right: $inuit-global-spacing-unit-huge;
   }
 
   &.o-media--reverse {
+
     > .o-media__img {
       margin-right: 0;
       margin-left: $inuit-global-spacing-unit-huge;
@@ -96,6 +105,7 @@
    ========================================================================== */
 
 .o-media--reverse {
+
   > .o-media__img {
     order: 1;
     margin-right: 0;
