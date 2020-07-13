@@ -1,6 +1,6 @@
-/* ==========================================================================
+/* ===========================================================================
    #BODY
-   ========================================================================== */
+   =========================================================================== */
 
 body {
   --brand-surface-primary: var(--global-color-white-offset);
@@ -13,13 +13,13 @@ body {
 }
 
 body {
+  background-color: var(--brand-surface-primary);
+  color: var(--brand-text-primary);
   font-family: $global-fonts-system;
-  @if $custom-fonts == true {
-    font-family: $global-font-family-primary;
-  }
   font-size: $inuit-global-font-size;
   font-style: normal;
   font-weight: 400;
-  background-color: var(--brand-surface-primary);
-  color: var(--brand-text-primary);
+  @if $custom-fonts == true {
+    font-family: $global-font-family-primary;
+  }
 }
