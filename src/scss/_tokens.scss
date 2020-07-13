@@ -4,86 +4,88 @@
 
 $global-baseline: 6px !default;
 
-$global-spacing-unit-factor-tiny:    1 !default;
-$global-spacing-unit-factor-small:   2 !default;
-$global-spacing-unit-factor:         4 !default;
-$global-spacing-unit-factor-large:   8 !default;
-$global-spacing-unit-factor-huge:   16 !default;
+$global-spacing-unit-factor-tiny: 1 !default;
+$global-spacing-unit-factor-small: 2 !default;
+$global-spacing-unit-factor: 4 !default;
+$global-spacing-unit-factor-large: 8 !default;
+$global-spacing-unit-factor-huge: 16 !default;
 
-$global-font-size-heading-1: 64px       !default;
-$global-font-size-heading-2: 53.333px   !default;
-$global-font-size-heading-3: 44.444px   !default;
-$global-font-size-heading-4: 37.037px   !default;
-$global-font-size-heading-5: 30.864px   !default;
-$global-font-size-heading-6: 25.72px    !default;
+$global-font-size-heading-1: 64px !default;
+$global-font-size-heading-2: 53.333px !default;
+$global-font-size-heading-3: 44.444px !default;
+$global-font-size-heading-4: 37.037px !default;
+$global-font-size-heading-5: 30.864px !default;
+$global-font-size-heading-6: 25.72px !default;
 
-$global-font-size-body-huge:  27.648px  !default;
-$global-font-size-body-large: 23.04px   !default;
-$global-font-size-body:       19.2px    !default;
-$global-font-size-body-small: 16px      !default; 
-$global-font-size-body-tiny:  13.333px  !default;
+$global-font-size-body-huge: 27.648px !default;
+$global-font-size-body-large: 23.04px !default;
+$global-font-size-body: 19.2px !default;
+$global-font-size-body-small: 16px !default;
+$global-font-size-body-tiny: 13.333px !default;
 
-$global-breakpoint-mobile:          320px   !default;
-$global-breakpoint-large-mobile:    540px   !default;
-$global-breakpoint-tablet:          760px   !default;
-$global-breakpoint-large-tablet:    980px   !default;
-$global-breakpoint-desktop:         1200px  !default;
-$global-breakpoint-large-desktop:   1420px  !default;
-$global-breakpoint-wide:            1640px  !default;
-$global-breakpoint-large-wide:      1860px  !default;
+$global-breakpoint-mobile: 320px !default;
+$global-breakpoint-large-mobile: 540px !default;
+$global-breakpoint-tablet: 760px !default;
+$global-breakpoint-large-tablet: 980px !default;
+$global-breakpoint-desktop: 1200px !default;
+$global-breakpoint-large-desktop: 1420px !default;
+$global-breakpoint-wide: 1640px !default;
+$global-breakpoint-large-wide: 1860px !default;
 
-$global-letter-spacing-wide:   0.025em !default;
+$global-letter-spacing-wide: 0.025em !default;
 $global-letter-spacing-tight: -0.025em !default;
 
-$global-border-radius:  3px               !default;
-$global-transition:     150ms ease-in-out !default;
+$global-border-radius: 3px !default;
+$global-transition: 150ms ease-in-out !default;
 
-$global-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !default;
+$global-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06) !default;
 
-$global-outline-width:  3px   !default;
-$global-outline-style:  solid !default;
-$global-focus-offset:   3px   !default;
+$global-outline-width: 3px !default;
+$global-outline-style: solid !default;
+$global-focus-offset: 3px !default;
 
-$global-fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$global-fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$global-font-family-primary:  "Inter";
+$global-font-family-primary: "Inter";
 
 :root {
-  --global-color-white:       #ffffff;
-  --global-color-black:       #000000;
+  --global-color-white: #fff;
+  --global-color-black: #000;
 
-  --global-color-white-offset:  #EDEDED;
-  --global-color-black-offset:  #1A1A1A;
+  --global-color-white-offset: #ededed;
+  --global-color-black-offset: #1a1a1a;
 
-  --global-color-neutral-010:    #EDEDED;
-  --global-color-neutral-020:    #D4D4D4;
-  --global-color-neutral-030:    #BBBBBB;
-  --global-color-neutral-040:    #9B9B9B;
-  --global-color-neutral-050:    #797979;
-  --global-color-neutral-060:    #5C5C5C;
-  --global-color-neutral-070:    #474747;
-  --global-color-neutral-080:    #353535;
-  --global-color-neutral-090:    #262626;
-  --global-color-neutral-100:    #1A1A1A;
+  --global-color-neutral-010: #ededed;
+  --global-color-neutral-020: #d4d4d4;
+  --global-color-neutral-030: #bbb;
+  --global-color-neutral-040: #9b9b9b;
+  --global-color-neutral-050: #797979;
+  --global-color-neutral-060: #5c5c5c;
+  --global-color-neutral-070: #474747;
+  --global-color-neutral-080: #353535;
+  --global-color-neutral-090: #262626;
+  --global-color-neutral-100: #1a1a1a;
 
   --global-color-success-010: #e1faeb;
   --global-color-success-020: #056b2e;
   --global-color-success-030: #075426;
 
-  --global-color-error-010:   #faf0f0;
-  --global-color-error-020:   #b80d0d;
-  --global-color-error-030:   #8f0e0e;
+  --global-color-error-010: #faf0f0;
+  --global-color-error-020: #b80d0d;
+  --global-color-error-030: #8f0e0e;
 
-  --brand-color-primary-010:  #f0f5fc;
-  --brand-color-primary-020:  #cfe0fc;
-  --brand-color-primary-030:  #accbfc;
-  --brand-color-primary-040:  #84b1fa;
-  --brand-color-primary-050:  #5691f0;
-  --brand-color-primary-060:  #3272d9;
-  --brand-color-primary-070:  #1d5bbf;
-  --brand-color-primary-080:  #114599;
-  --brand-color-primary-090:  #103570;
-  --brand-color-primary-100:  #15233b;
+  --brand-color-primary-010: #f0f5fc;
+  --brand-color-primary-020: #cfe0fc;
+  --brand-color-primary-030: #accbfc;
+  --brand-color-primary-040: #84b1fa;
+  --brand-color-primary-050: #5691f0;
+  --brand-color-primary-060: #3272d9;
+  --brand-color-primary-070: #1d5bbf;
+  --brand-color-primary-080: #114599;
+  --brand-color-primary-090: #103570;
+  --brand-color-primary-100: #15233b;
 
   // --brand-color-primary-010:  #d7faf8;
   // --brand-color-primary-020:  #83f2eb;

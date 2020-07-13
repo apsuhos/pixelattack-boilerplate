@@ -82,9 +82,18 @@ $mq-breakpoints: (
   desktop: $global-breakpoint-desktop,
   l-desktop: $global-breakpoint-large-desktop,
   wide: $global-breakpoint-wide,
-  l-wide: $global-breakpoint-large-wide
+  l-wide: $global-breakpoint-large-wide,
 );
-$mq-show-breakpoints: (mobile, l-mobile, tablet, l-tablet, desktop, l-desktop, wide, l-wide);
+$mq-show-breakpoints: (
+  mobile,
+  l-mobile,
+  tablet,
+  l-tablet,
+  desktop,
+  l-desktop,
+  wide,
+  l-wide
+);
 @import "mq";
 @import "tools/tools.font-size";
 @import "tools/tools.clearfix";
