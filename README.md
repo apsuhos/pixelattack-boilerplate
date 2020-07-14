@@ -12,29 +12,53 @@ $ npm install
 
 ```
 Project
+├── .vscode
+│		├── settings.json
 ├── assets
-├── README.md
-├── node_modules
+├── .editorconfig
+├── .eslintrc
+├── .gitattributes
+├── .gitignore
+├── .prettierignore
+├── prettierrc
+├── stylelintrc
+├── gulpfile.js
+├── LICENCE
 ├── package.json
 ├── package-lock.json
-├── .gitignore
-├── .eslintrc
-├── .eslintignore
-├── gulpfile.js
+├── README.md
 └── src/
     ├── scss/
     │   ├── components/
     │   │   └── _components.buttons.scss
-    │   ├── core/
-    │   │   └── _core_.colors.scss
-    │   │   └── _core_.typographt.scss
+		│   │   └── _components.wrapper.scss
+		│		├── elements/
+		│		|		└── _elements.body.scss
+		│		│		└── _elements.headings.scss
+		│		│		└── _elements.links.scss
+		│		│		└── _elements.root.scss
+    │   ├── objects/
+    │   │   └── _objects.box.scss
+    │   │   └── _objects.media.scss
+    │   │   └── _objects.row.scss
+    │   │   └── _objects.section.scss
+    │   │   └── _objects.wrapper.scss
     │   ├── settings/
     │   │   ├──_settings.config.scss
-    │   │   └──_settings.global.scss
+    │   ├── tools/
+    │   │   ├──_tools.fluid-font-size.scss
     │   ├── utilities/
-    │   │   └──_utilities.display.scss
-    │   │   └──_utilities.headings.scss
+    │   │   └──_utilities.bgcolors.scss
+    │   │   └──_utilities.colors.scss
+    │   │   └──_utilities.displays.scss
+    │   │   └──_utilities.flexbox.scss
+    │   │   └──_utilities.responsive-spacings.scss
+    │   │   └──_utilities.space.scss
+    │   │   └──_utilities.spacings.scss
     │   │   └──_utilities.text-align.scss
+    │   │   └──_utilities.typography.scss
+    │   │   └──_utilities.widths.scss
+    │   ├── _tokens_.scss
     │   └── main.scss
     ├── js
     │   └── main.js
