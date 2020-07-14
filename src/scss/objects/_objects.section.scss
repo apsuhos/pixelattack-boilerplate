@@ -7,7 +7,6 @@ $inuit-section-huge-factor: 1.25 !default;
 
 .o-section {
 	@include inuit-clearfix();
-	background-color: #000;
 	display: block;
 	padding-bottom: $inuit-global-spacing-unit;
 	padding-top: $inuit-global-spacing-unit;

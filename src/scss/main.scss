@@ -75,24 +75,24 @@ $inuit-global-font-size: $global-font-size-body;
 // TOOLS
 
 $mq-breakpoints: (
-  mobile: $global-breakpoint-mobile,
-  l-mobile: $global-breakpoint-large-mobile,
-  tablet: $global-breakpoint-tablet,
-  l-tablet: $global-breakpoint-large-tablet,
-  desktop: $global-breakpoint-desktop,
-  l-desktop: $global-breakpoint-large-desktop,
-  wide: $global-breakpoint-wide,
-  l-wide: $global-breakpoint-large-wide,
+	mobile: $global-breakpoint-mobile,
+	l-mobile: $global-breakpoint-large-mobile,
+	tablet: $global-breakpoint-tablet,
+	l-tablet: $global-breakpoint-large-tablet,
+	desktop: $global-breakpoint-desktop,
+	l-desktop: $global-breakpoint-large-desktop,
+	wide: $global-breakpoint-wide,
+	l-wide: $global-breakpoint-large-wide,
 );
 $mq-show-breakpoints: (
-  mobile,
-  l-mobile,
-  tablet,
-  l-tablet,
-  desktop,
-  l-desktop,
-  wide,
-  l-wide
+	mobile,
+	l-mobile,
+	tablet,
+	l-tablet,
+	desktop,
+	l-desktop,
+	wide,
+	l-wide
 );
 @import "mq";
 @import "tools/tools.font-size";
@@ -139,13 +139,13 @@ $inuit-box-huge-factor: 1.25; // 1.25 * 112 (huge spacing) = 140 => 140 / 7 (glo
 @import "objects/objects.pack";
 
 // COMPONENTS
+@import "components/components.wrapper";
 $button-ghost-border-width: 3px;
 @import "components/components.buttons";
 
 // UTILITIES
 @import "utilities/utilities.typography";
 @import "utilities/utilities.colors";
-@import "utilities/utilities.surfaces";
 @import "utilities/utilities.text-align";
 @import "utilities/utilities.displays";
 @import "utilities/utilities.flexbox";

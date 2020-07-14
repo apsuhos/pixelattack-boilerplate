@@ -10,18 +10,18 @@
 //   .inline-block
 
 $display-values: (
-  'hidden': none,
-  'block': block,
-  'flow-root': flow-root,
-  'inline-block': inline-block,
-  'inline': inline,
-  'flex': flex,
-  'inline-flex': inline-flex,
-  'grid': grid,
-  'inline-grid': inline-grid,
-  'table': table,
-  'table-caption': table-caption,
-  'table-cell': table-cell,
+	"hidden": none,
+	"block": block,
+	"flow-root": flow-root,
+	"inline-block": inline-block,
+	"inline": inline,
+	"flex": flex,
+	"inline-flex": inline-flex,
+	"grid": grid,
+	"inline-grid": inline-grid,
+	"table": table,
+	"table-caption": table-caption,
+	"table-cell": table-cell,
 ) !default;
 
 // Optionally, inuitcss can generate display helper aliases. E.g.:
@@ -32,42 +32,42 @@ $display-values: (
 //   .show@tablet
 
 $display-alias-definitions: (
-  none: hide,
-  block: show,
+	none: hide,
+	block: show,
 ) !default;
 
 // A mixin to spit out our display classes.
 
-@mixin pa-displays($display-values, $breakpoint: null) {
-  // Loop through the display values.
-  @each $name, $display-value in $display-values {
-    // Make a rule in the format `.block[@<breakpoint>]`.
-    $rule: '.#{$name}#{$breakpoint}';
+@mixin displays($display-values, $breakpoint: null) {
+	// Loop through the display values.
+	@each $name, $display-value in $display-values {
+		// Make a rule in the format `.block[@<breakpoint>]`.
+		$rule: ".#{$name}#{$breakpoint}";
 
-    // Add alias to rule if exists.
-    $alias: map-get($display-alias-definitions, $display-value);
-    @if $display-aliases == true and $alias != null {
-      $rule: $rule + ', .u-#{$alias}#{$breakpoint}';
-    }
+		// Add alias to rule if exists.
+		$alias: map-get($display-alias-definitions, $display-value);
+		@if $display-aliases == true and $alias != null {
+			$rule: $rule + ", .u-#{$alias}#{$breakpoint}";
+		}
 
-    // Build it.
-    #{$rule} {
-      display: $display-value !important;
-    }
-  }
+		// Build it.
+		#{$rule} {
+			display: $display-value !important;
+		}
+	}
 }
 
 // Check if enabled.
 @if $displays == true {
-  // Global helpers.
-  @include pa-displays($display-values);
+	// Global helpers.
+	@include displays($display-values);
 
-  // Responsive helpers.
-  @if (variable-exists(mq-breakpoints)) {
-    @each $bp-name, $bp-value in $mq-breakpoints {
-      @include mq($from: $bp-name) {
-        @include displays($display-values, \@#{$bp-name});
-      }
-    }
-  }
+	// Responsive helpers.
+	@if (variable-exists(mq-breakpoints)) {
+		@each $bp-name, $bp-value in $mq-breakpoints {
+			@include mq($from: $bp-name) {
+				@include displays($display-values, \@#{$bp-name});
+			}
+		}
+	}
 }
