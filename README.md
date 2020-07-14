@@ -20,8 +20,6 @@ git init
 git add .
 git commit -m "Initial commit"
 git checkout -b dev && npm run dev
-
-
 ```
 
 ### Directory
