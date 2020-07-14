@@ -1,10 +1,14 @@
 {
-  "extends": [
-    "stylelint-config-sass-guidelines",
-    "stylelint-config-prettier"
-  ],
-  "plugins": [
-    "stylelint-scss",
-    "stylelint-order"
-  ]
+	"extends": [
+		"stylelint-config-sass-guidelines",
+		"stylelint-config-prettier"
+	],
+	"plugins": [
+		"stylelint-scss",
+		"stylelint-order"
+	],
+	"rules": {
+		"selector-class-pattern": null,
+		"max-nesting-depth": 4
+	}
 }
