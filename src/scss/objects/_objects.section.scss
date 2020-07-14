@@ -7,13 +7,14 @@ $inuit-section-huge-factor: 1.25 !default;
 
 .o-section {
   @include inuit-clearfix();
+  background-color: #000;
   display: block;
-  padding-top: $inuit-global-spacing-unit;
   padding-bottom: $inuit-global-spacing-unit;
+  padding-top: $inuit-global-spacing-unit;
 
   @include mq($from: $inuit-section-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-large;
     padding-bottom: $inuit-global-spacing-unit-large;
+    padding-top: $inuit-global-spacing-unit-large;
   }
 
   > :last-child {
@@ -22,42 +23,42 @@ $inuit-section-huge-factor: 1.25 !default;
 }
 
 .o-section--tiny {
-  padding-top: $inuit-global-spacing-unit-tiny;
   padding-bottom: $inuit-global-spacing-unit-tiny;
+  padding-top: $inuit-global-spacing-unit-tiny;
 
   @include mq($from: $inuit-section-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-small;
     padding-bottom: $inuit-global-spacing-unit-small;
+    padding-top: $inuit-global-spacing-unit-small;
   }
 }
 
 .o-section--small {
-  padding-top: $inuit-global-spacing-unit-small;
   padding-bottom: $inuit-global-spacing-unit-small;
+  padding-top: $inuit-global-spacing-unit-small;
 
   @include mq($from: $inuit-section-breakpoint) {
-    padding-top: $inuit-global-spacing-unit;
     padding-bottom: $inuit-global-spacing-unit;
+    padding-top: $inuit-global-spacing-unit;
   }
 }
 
 .o-section--large {
-  padding-top: $inuit-global-spacing-unit-large;
   padding-bottom: $inuit-global-spacing-unit-large;
+  padding-top: $inuit-global-spacing-unit-large;
 
   @include mq($from: $inuit-section-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-huge;
     padding-bottom: $inuit-global-spacing-unit-huge;
+    padding-top: $inuit-global-spacing-unit-huge;
   }
 }
 
 .o-section--huge {
-  padding-top: $inuit-global-spacing-unit-huge;
   padding-bottom: $inuit-global-spacing-unit-huge;
+  padding-top: $inuit-global-spacing-unit-huge;
 
   @include mq($from: $inuit-section-breakpoint) {
-    padding-top: $inuit-global-spacing-unit-huge * $inuit-section-huge-factor;
     padding-bottom: $inuit-global-spacing-unit-huge * $inuit-section-huge-factor;
+    padding-top: $inuit-global-spacing-unit-huge * $inuit-section-huge-factor;
   }
 }
 
