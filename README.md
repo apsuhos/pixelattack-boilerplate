@@ -14,13 +14,13 @@ then run
 
 ```
 git clone git@github.com:apsuhos/pixelattack-boilerplate.git .
-&& rm -rf .git
-&& npm install
-&& git init
-&& git add .
-&& git commit -m "Initial commit"
-&& git checkout -b dev
-&& npm run dev
+rm -rf .git
+npm install
+git init
+git add .
+git commit -m "Initial commit"
+git checkout -b dev && npm run dev
+
 
 ```
 
