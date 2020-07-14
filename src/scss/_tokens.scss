@@ -39,62 +39,62 @@ $global-border-radius: 3px !default;
 $global-transition: 150ms ease-in-out !default;
 
 $global-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-  0 2px 4px -1px rgba(0, 0, 0, 0.06) !default;
+	0 2px 4px -1px rgba(0, 0, 0, 0.06) !default;
 
 $global-outline-width: 3px !default;
 $global-outline-style: solid !default;
 $global-focus-offset: 3px !default;
 
 $global-fonts-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+	Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$global-font-family-primary: "Inter";
+$global-font-family-primary: "Inter" !default;
 
 :root {
-  --global-color-white: #fff;
-  --global-color-black: #000;
+	--global-color-white: #fff;
+	--global-color-black: #000;
 
-  --global-color-white-offset: #ededed;
-  --global-color-black-offset: #1a1a1a;
+	--global-color-white-offset: #ededed;
+	--global-color-black-offset: #1a1a1a;
 
-  --global-color-neutral-010: #ededed;
-  --global-color-neutral-020: #d4d4d4;
-  --global-color-neutral-030: #bbb;
-  --global-color-neutral-040: #9b9b9b;
-  --global-color-neutral-050: #797979;
-  --global-color-neutral-060: #5c5c5c;
-  --global-color-neutral-070: #474747;
-  --global-color-neutral-080: #353535;
-  --global-color-neutral-090: #262626;
-  --global-color-neutral-100: #1a1a1a;
+	--global-color-neutral-010: #ededed;
+	--global-color-neutral-020: #d4d4d4;
+	--global-color-neutral-030: #bbb;
+	--global-color-neutral-040: #9b9b9b;
+	--global-color-neutral-050: #797979;
+	--global-color-neutral-060: #5c5c5c;
+	--global-color-neutral-070: #474747;
+	--global-color-neutral-080: #353535;
+	--global-color-neutral-090: #262626;
+	--global-color-neutral-100: #1a1a1a;
 
-  --global-color-success-010: #e1faeb;
-  --global-color-success-020: #056b2e;
-  --global-color-success-030: #075426;
+	--global-color-success-010: #e1faeb;
+	--global-color-success-020: #056b2e;
+	--global-color-success-030: #075426;
 
-  --global-color-error-010: #faf0f0;
-  --global-color-error-020: #b80d0d;
-  --global-color-error-030: #8f0e0e;
+	--global-color-error-010: #faf0f0;
+	--global-color-error-020: #b80d0d;
+	--global-color-error-030: #8f0e0e;
 
-  --brand-color-primary-010: #f0f5fc;
-  --brand-color-primary-020: #cfe0fc;
-  --brand-color-primary-030: #accbfc;
-  --brand-color-primary-040: #84b1fa;
-  --brand-color-primary-050: #5691f0;
-  --brand-color-primary-060: #3272d9;
-  --brand-color-primary-070: #1d5bbf;
-  --brand-color-primary-080: #114599;
-  --brand-color-primary-090: #103570;
-  --brand-color-primary-100: #15233b;
+	--brand-color-primary-010: #f0f5fc;
+	--brand-color-primary-020: #cfe0fc;
+	--brand-color-primary-030: #accbfc;
+	--brand-color-primary-040: #84b1fa;
+	--brand-color-primary-050: #5691f0;
+	--brand-color-primary-060: #3272d9;
+	--brand-color-primary-070: #1d5bbf;
+	--brand-color-primary-080: #114599;
+	--brand-color-primary-090: #103570;
+	--brand-color-primary-100: #15233b;
 
-  // --brand-color-primary-010:  #d7faf8;
-  // --brand-color-primary-020:  #83f2eb;
-  // --brand-color-primary-030:  #43ded3;
-  // --brand-color-primary-040:  #43ded3;
-  // --brand-color-primary-050:  #0ea197;
-  // --brand-color-primary-060:  #08827a;
-  // --brand-color-primary-070:  #086962;
-  // --brand-color-primary-080:  #09524d;
-  // --brand-color-primary-090:  #0a3d3a;
-  // --brand-color-primary-100:  #0a2b29;
+	// --brand-color-primary-010:  #d7faf8;
+	// --brand-color-primary-020:  #83f2eb;
+	// --brand-color-primary-030:  #43ded3;
+	// --brand-color-primary-040:  #43ded3;
+	// --brand-color-primary-050:  #0ea197;
+	// --brand-color-primary-060:  #08827a;
+	// --brand-color-primary-070:  #086962;
+	// --brand-color-primary-080:  #09524d;
+	// --brand-color-primary-090:  #0a3d3a;
+	// --brand-color-primary-100:  #0a2b29;
 }
