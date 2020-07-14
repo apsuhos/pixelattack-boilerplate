@@ -4,8 +4,24 @@ A personal small scale boilerplate for Pixelattack projects
 
 ## Install
 
+Go into the project directory
+
 ```
-$ npm install
+cd project-name
+```
+
+then run
+
+```
+git clone git@github.com:apsuhos/pixelattack-boilerplate.git .
+&& rm -rf .git
+&& npm install
+&& git init
+&& git add .
+&& git commit -m "Initial commit"
+&& git checkout -b dev
+&& npm run dev
+
 ```
 
 ### Directory
@@ -13,7 +29,7 @@ $ npm install
 ```
 Project
 ├── .vscode
-│		├── settings.json
+│   └── settings.json
 ├── assets
 ├── .editorconfig
 ├── .eslintrc
@@ -31,12 +47,12 @@ Project
     ├── scss/
     │   ├── components/
     │   │   └── _components.buttons.scss
-		│   │   └── _components.wrapper.scss
-		│		├── elements/
-		│		|		└── _elements.body.scss
-		│		│		└── _elements.headings.scss
-		│		│		└── _elements.links.scss
-		│		│		└── _elements.root.scss
+    │   │   └── _components.wrapper.scss
+    │   ├── elements/
+    │   │   └── _elements.body.scss
+    │   │   └── _elements.headings.scss
+    │   │   └── _elements.links.scss
+    │   │   └── _elements.root.scss
     │   ├── objects/
     │   │   └── _objects.box.scss
     │   │   └── _objects.media.scss
@@ -67,20 +83,9 @@ Project
     └── index.html
 ```
 
-## Development
-
-```
-$ npm run dev
-```
-
-## Production
-
-```
-$ npm run build
-```
-
 ## TODOS
 
+- Fluid font size
 - Template engine
 - Terser options
 - Head of html document
