@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+
+.c-wrapper-primary {
+	--brand-surface-primary: var(--global-color-white-offset);
+	--brand-text-primary: var(--brand-color-primary-100);
+}
+
+[data-theme="dark"] .c-wrapper-primary {
+	--brand-surface-primary: var(--brand-color-primary-100);
+	--brand-text-primary: var(--global-color-white);
+}
+
+.c-wrapper-primary {
+	background-color: var(--brand-surface-primary);
+	color: var(--brand-text-primary);
+}
+
+// .c-wrapper-primary-light {
+// 	--brand-surface-primary: var(--global-color-white);
+// 	--brand-text-primary: var(--brand-color-primary-100);
+// }
+
+// [data-theme="dark"] .c-wrapper-primary-light {
+// 	--brand-surface-primary: var(--brand-color-primary-010);
+// 	--brand-text-primary: var(--brand-color-primary-100);
+// }
+
+// .c-wrapper-primary-light {
+// 	background-color: var(--brand-surface-primary);
+// 	color: var(--brand-text-primary);
+// }

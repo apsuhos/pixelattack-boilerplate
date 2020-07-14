@@ -81,7 +81,7 @@ $button-ghost-border-width: 3px !default;
 	}
 }
 
-[data-theme="dark"] .u-surface-primary .c-btn--ghost {
+[data-theme="dark"] .c-wrapper-primary .c-btn--ghost {
 	&.c-btn--primary {
 		--brand-button-ghost-border-primary: var(--global-color-white);
 		--brand-button-ghost-text-primary: var(--global-color-white);
