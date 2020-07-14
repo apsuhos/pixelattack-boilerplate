@@ -44,8 +44,17 @@ $global-outline-width: 3px;
 $global-outline-style: solid;
 $global-focus-offset: 3px;
 
-$global-font-family-primary: "Inter";
+$global-font-family-primary: "Poppins";
+$global-font-family-secondary: "Abril Fatface";
 @import "tokens";
+
+$inuit-global-baseline: $global-baseline;
+
+$inuit-global-spacing-unit-factor-tiny: $global-spacing-unit-factor-tiny;
+$inuit-global-spacing-unit-factor-small: $global-spacing-unit-factor-small;
+$inuit-global-spacing-unit-factor: $global-spacing-unit-factor;
+$inuit-global-spacing-unit-factor-large: $global-spacing-unit-factor-large;
+$inuit-global-spacing-unit-factor-huge: $global-spacing-unit-factor-huge;
 
 $inuit-global-font-size: $global-font-size-body;
 @import "settings/settings.core";

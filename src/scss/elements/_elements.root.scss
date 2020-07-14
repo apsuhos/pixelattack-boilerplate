@@ -3,35 +3,55 @@
    =========================================================================== */
 
 ::selection {
-  --brand-selection-bg-primary: var(--brand-color-primary-100);
-  --brand-selection-text-primary: var(--global-color-white);
+	--brand-selection-bg-primary: var(--brand-color-primary-100);
+	--brand-selection-text-primary: var(--global-color-white);
 }
 
 [data-theme="dark"] ::selection {
-  --brand-selection-bg-primary: var(--global-color-white);
-  --brand-selection-text-primary: var(--brand-color-primary-100);
+	--brand-selection-bg-primary: var(--global-color-white);
+	--brand-selection-text-primary: var(--brand-color-primary-100);
 }
 
 ::selection {
-  background: var(--brand-selection-bg-primary);
-  color: var(--brand-selection-text-primary);
+	background: var(--brand-selection-bg-primary);
+	color: var(--brand-selection-text-primary);
 }
 
 @if $custom-fonts == true {
-  @font-face {
-    font-family: $global-font-family-primary;
-    font-style: normal;
-    font-weight: 400;
-    src: local(""), local(""),
-      url("../fonts/inter/inter-400.woff2") format("woff2"),
-      url("../fonts/inter/inter-400.woff") format("woff"),
-      url("../fonts/inter/inter-400.ttf") format("truetype");
-  }
+	@font-face {
+		font-family: $global-font-family-primary;
+		font-style: normal;
+		font-weight: 400;
+		src: local(""), local(""),
+			url("../fonts/inter/inter-400.woff2") format("woff2"),
+			url("../fonts/inter/inter-400.woff") format("woff"),
+			url("../fonts/inter/inter-400.ttf") format("truetype");
+	}
+}
+
+@if $custom-fonts == true {
+	@font-face {
+		font-family: $global-font-family-primary;
+		font-style: normal;
+		font-weight: 400;
+		src: local("Poppins Regular"), local("Poppins-Regular"),
+			url("../fonts/poppins/poppins-400.woff2") format("woff2"),
+			url("../fonts/poppins/poppins-400.woff") format("woff");
+	}
+
+	@font-face {
+		font-family: $global-font-family-secondary;
+		font-style: normal;
+		font-weight: 400;
+		src: local("Abril Fatface"), local("AbrilFatface-Regular"),
+			url("../fonts/abril-fatface/abril-fatface-400.woff2") format("woff2"),
+			url("../fonts/abril-fatface/abril-fatface-400.woff") format("woff");
+	}
 }
 
 html {
-  font-size: ($inuit-global-font-size / 16px) * 1em;
-  line-height: $inuit-global-line-height / $inuit-global-font-size;
-  min-height: 100%;
-  overflow-y: scroll;
+	font-size: ($inuit-global-font-size / 16px) * 1em;
+	line-height: $inuit-global-line-height / $inuit-global-font-size;
+	min-height: 100%;
+	overflow-y: scroll;
 }

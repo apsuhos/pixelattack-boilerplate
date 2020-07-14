@@ -37,9 +37,6 @@ Project
     │   │   └──_utilities.text-align.scss
     │   └── main.scss
     ├── js
-    │   ├── jquery-3.4.1.min.js
-    │   ├── modernizr-3.8.0.min
-    │   ├── plugins.js
     │   └── main.js
     ├── images
     ├── fonts
@@ -60,8 +57,6 @@ $ npm run build
 
 ## TODOS
 
-- jQuery
-- Modernizr
 - Template engine
 - Terser options
 - Head of html document

@@ -15,33 +15,33 @@ h3,
 h4,
 h5,
 h6 {
-  @if $custom-fonts == true {
-    font-family: $global-font-family-primary;
-  }
-  font-style: normal;
-  font-weight: 400;
+	@if $custom-fonts == true {
+		font-family: $global-font-family-secondary;
+	}
+	font-style: normal;
+	font-weight: 400;
 }
 
 h1 {
-  @include inuit-font-size($global-font-size-heading-1);
+	@include inuit-font-size($global-font-size-heading-1);
 }
 
 h2 {
-  @include inuit-font-size($global-font-size-heading-2);
+	@include inuit-font-size($global-font-size-heading-2);
 }
 
 h3 {
-  @include inuit-font-size($global-font-size-heading-3);
+	@include inuit-font-size($global-font-size-heading-3);
 }
 
 h4 {
-  @include inuit-font-size($global-font-size-heading-4);
+	@include inuit-font-size($global-font-size-heading-4);
 }
 
 h5 {
-  @include inuit-font-size($global-font-size-heading-5);
+	@include inuit-font-size($global-font-size-heading-5);
 }
 
 h6 {
-  @include inuit-font-size($global-font-size-heading-6);
+	@include inuit-font-size($global-font-size-heading-6);
 }
