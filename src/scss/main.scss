@@ -46,6 +46,8 @@ $global-focus-offset: 3px;
 
 $global-font-family-primary: "Inter";
 @import "tokens";
+
+$inuit-global-font-size: $global-font-size-body;
 @import "settings/settings.core";
 
 // TOOLS
