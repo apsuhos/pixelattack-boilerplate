@@ -6,9 +6,9 @@
 // feature switches, etc. in here.
 
 $inuit-config: (
-  env: dev,
-  healthcheck: false,
-  debug: true,
+	env: dev,
+	healthcheck: false,
+	debug: true,
 );
 
 // You can access data in this map using the following function:
@@ -20,5 +20,18 @@ $inuit-config: (
 // @if (inuit-config(debug) == true) { ...  }
 
 @function inuit-config($key) {
-  @return map-get($inuit-config, $key);
+	@return map-get($inuit-config, $key);
 }
+
+$custom-fonts: true !default;
+$mq-responsive: true !default;
+$text-align-direction: true !default;
+$displays: true !default;
+$display-aliases: true !default;
+$flex-direction: true !default;
+$flex-justify-content: true !default;
+$flex-align-items: true !default;
+$flex-wrap: true !default;
+$flex-align-self: true !default;
+$flex-align-content: true !default;
+$inuit-offsets: true !default;

@@ -1,25 +1,6 @@
 // SETTINGS
 @import "settings/settings.config";
 
-$custom-fonts: false;
-
-$mq-responsive: true;
-
-$text-align-direction: true;
-
-$displays: true;
-$display-aliases: true;
-
-$flex-direction: true;
-$flex-justify-content: true;
-$flex-align-items: true;
-$flex-wrap: true;
-$flex-align-self: true;
-$flex-align-content: true;
-
-$inuit-offsets: true;
-@import "switches";
-
 $global-baseline: 7px;
 
 $global-spacing-unit-factor-tiny: 1;
@@ -41,8 +22,6 @@ $global-font-size-body: 19.2px; // $inuit-global-font-size
 $global-font-size-body-small: 16px;
 $global-font-size-body-tiny: 13.333px;
 
-// $global-font-family-primary:  "Inter";
-
 $global-breakpoint-mobile: 320px;
 $global-breakpoint-large-mobile: 540px;
 $global-breakpoint-tablet: 760px;
@@ -52,28 +31,24 @@ $global-breakpoint-large-desktop: 1420px;
 $global-breakpoint-tvscreen: 1640px;
 $global-breakpoint-large-tvscreen: 1860px;
 
+$global-letter-spacing-wide: 0.025em;
+$global-letter-spacing-tight: -0.025em;
+
 $global-border-radius: 3px;
 $global-transition: 150ms ease-in-out;
+
+$global-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+	0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
 $global-outline-width: 3px;
 $global-outline-style: solid;
 $global-focus-offset: 3px;
 
+$global-font-family-primary: "Inter";
 @import "tokens";
-
-$inuit-global-baseline: $global-baseline;
-
-$inuit-global-spacing-unit-factor-tiny: $global-spacing-unit-factor-tiny;
-$inuit-global-spacing-unit-factor-small: $global-spacing-unit-factor-small;
-$inuit-global-spacing-unit-factor: $global-spacing-unit-factor;
-$inuit-global-spacing-unit-factor-large: $global-spacing-unit-factor-large;
-$inuit-global-spacing-unit-factor-huge: $global-spacing-unit-factor-huge;
-
-$inuit-global-font-size: $global-font-size-body;
 @import "settings/settings.core";
 
 // TOOLS
-
 $mq-breakpoints: (
 	mobile: $global-breakpoint-mobile,
 	l-mobile: $global-breakpoint-large-mobile,
@@ -115,7 +90,6 @@ $mq-show-breakpoints: (
 
 // OBJECTS
 @import "objects/objects.grid";
-// @import "objects/objects.layout";
 @import "objects/objects.wrapper";
 
 $inuit-section-breakpoint: map-get($mq-breakpoints, wide);
@@ -146,6 +120,7 @@ $button-ghost-border-width: 3px;
 // UTILITIES
 @import "utilities/utilities.typography";
 @import "utilities/utilities.colors";
+@import "utilities/utilities.bgcolors";
 @import "utilities/utilities.text-align";
 @import "utilities/utilities.displays";
 @import "utilities/utilities.flexbox";
