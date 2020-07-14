@@ -3,5 +3,8 @@
     "stylelint-config-sass-guidelines",
     "stylelint-config-prettier"
   ],
-  "rules": {}
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ]
 }
