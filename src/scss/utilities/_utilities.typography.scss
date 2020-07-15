@@ -3,89 +3,97 @@
    ========================================================================== */
 
 .h1 {
-  @include inuit-font-size($global-font-size-heading-1);
+	@include inuit-font-size($global-font-size-heading-1);
 }
 
 .h2 {
-  @include inuit-font-size($global-font-size-heading-2);
+	@include inuit-font-size($global-font-size-heading-2);
 }
 
 .h3 {
-  @include inuit-font-size($global-font-size-heading-3);
+	@include inuit-font-size($global-font-size-heading-3);
 }
 
 .h4 {
-  @include inuit-font-size($global-font-size-heading-4);
+	@include inuit-font-size($global-font-size-heading-4);
 }
 
 .h5 {
-  @include inuit-font-size($global-font-size-heading-5);
+	@include inuit-font-size($global-font-size-heading-5);
 }
 
 .h6 {
-  @include inuit-font-size($global-font-size-heading-6);
+	@include inuit-font-size($global-font-size-heading-6);
 }
 
 .text-huge {
-  @include inuit-font-size($global-font-size-body-huge);
+	@include inuit-font-size($global-font-size-body-huge);
 }
 
 .text-large {
-  @include inuit-font-size($global-font-size-body-large);
+	@include inuit-font-size($global-font-size-body-large);
 }
 
 .text-regular {
-  @include inuit-font-size($global-font-size-body);
+	@include inuit-font-size($global-font-size-body);
 }
 
 .text-small {
-  @include inuit-font-size($global-font-size-body-small);
+	@include inuit-font-size($global-font-size-body-small);
 }
 
 .text-tiny {
-  @include inuit-font-size($global-font-size-body-tiny);
+	@include inuit-font-size($global-font-size-body-tiny);
 }
 
 .tracking-wide {
-  letter-spacing: $global-letter-spacing-wide;
+	letter-spacing: $global-letter-spacing-wide;
 }
 
 .tracking-tight {
-  letter-spacing: $global-letter-spacing-tight;
+	letter-spacing: $global-letter-spacing-tight;
 }
 
 .font-hairline {
-  font-weight: 100;
+	font-weight: 100;
 }
 
 .font-thin {
-  font-weight: 200;
+	font-weight: 200;
 }
 
 .font-light {
-  font-weight: 300;
+	font-weight: 300;
 }
 
 .font-normal {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 .font-medium {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .font-semibold {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .font-bold {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .font-extrabold {
-  font-weight: 800;
+	font-weight: 800;
 }
 
 .font-black {
-  font-weight: 900;
+	font-weight: 900;
+}
+
+.font-primary {
+	font-family: $global-font-family-primary;
+}
+
+.font-secondary {
+	font-family: $global-font-family-secondary;
 }
