@@ -97,3 +97,15 @@
 .font-secondary {
 	font-family: $global-font-family-secondary;
 }
+
+.underline {
+	text-decoration: underline;
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+
+.no-underline {
+	text-decoration: none;
+}
