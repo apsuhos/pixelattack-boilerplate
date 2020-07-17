@@ -2,40 +2,23 @@
    #LINKS
    =========================================================================== */
 
-a:not(.c-btn) {
-	--brand-interactive-color-primary: var(--brand-color-primary-070);
-	--brand-interactive-underline-primary: var(--brand-color-primary-070);
-	--brand-interactive-underline-primary-action: var(--brand-color-primary-080);
-	--brand-outline-primary: var(--brand-color-primary-080);
+a {
+	--text-color: var(--brand-color-primary-070);
+	--text-color-hover: var(--brand-color-primary-080);
+	--outline-color: var(--brand-color-primary-080);
 }
 
-[data-theme="dark"] .c-wrapper-primary a:not(.c-btn) {
-	--brand-interactive-color-primary: var(--global-color-white);
-	--brand-interactive-underline-primary: var(--brand-color-primary-060);
-	--brand-interactive-underline-primary-action: var(--brand-color-primary-070);
-	--brand-outline-primary: var(--brand-color-primary-070);
+a {
+	color: var(--text-color);
+	transition: color $global-transition;
 }
 
-a:not(.c-btn) {
-	box-shadow: inset 0 -1px 0 var(--brand-interactive-underline-primary);
-	color: var(--brand-interactive-color-primary);
-	text-decoration: none;
-	transition: color $global-transition, box-shadow $global-transition;
+a:hover,
+a:focus {
+	color: var(--text-color-hover);
 }
 
 a:focus {
+	outline: var(--outline-color) $global-outline-style $global-outline-width;
 	outline-offset: $global-focus-offset;
-	outline-style: $global-outline-style;
-	outline-width: $global-outline-width;
-}
-
-a:focus:not(.c-btn) {
-	outline-color: var(--brand-outline-primary);
-}
-
-a:focus:not(.c-btn),
-a:hover:not(.c-btn) {
-	box-shadow: inset 0 -2em 0 var(--brand-interactive-underline-primary-action);
-	color: var(--global-color-white);
-	text-decoration: none;
 }

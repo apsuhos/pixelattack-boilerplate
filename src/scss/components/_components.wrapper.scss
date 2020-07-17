@@ -3,31 +3,16 @@
    ========================================================================== */
 
 .c-wrapper-primary {
-	--brand-surface-primary: var(--global-color-white-offset);
-	--brand-text-primary: var(--brand-color-primary-100);
+	--background-color: var(--global-color-white-offset);
+	--text-color: var(--global-color-black-offset);
 }
 
-[data-theme="dark"] .c-wrapper-primary {
-	--brand-surface-primary: var(--brand-color-primary-100);
-	--brand-text-primary: var(--global-color-white);
+.dark-theme .c-wrapper-primary {
+	--background-color: var(--global-color-black-offset);
+	--text-color: var(--global-color-white-offset);
 }
 
 .c-wrapper-primary {
-	background-color: var(--brand-surface-primary);
-	color: var(--brand-text-primary);
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
-
-// .c-wrapper-primary-light {
-// 	--brand-surface-primary: var(--global-color-white);
-// 	--brand-text-primary: var(--brand-color-primary-100);
-// }
-
-// [data-theme="dark"] .c-wrapper-primary-light {
-// 	--brand-surface-primary: var(--brand-color-primary-010);
-// 	--brand-text-primary: var(--brand-color-primary-100);
-// }
-
-// .c-wrapper-primary-light {
-// 	background-color: var(--brand-surface-primary);
-// 	color: var(--brand-text-primary);
-// }

@@ -10,6 +10,7 @@ $button-ghost-border-width: 3px !default;
 	display: inline-block;
 	font: inherit;
 	margin: 0;
+	outline-offset: $global-focus-offset;
 	padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
 	text-align: center;
 	transition: background-color $global-transition;
@@ -17,27 +18,16 @@ $button-ghost-border-width: 3px !default;
 }
 
 .c-btn--primary {
-	--brand-button-bg-primary: var(--brand-color-primary-070);
-	--brand-button-bg-primary-action: var(--brand-color-primary-080);
-	--brand-button-text-primary: var(--global-color-white);
-	--brand-button-outline-primary: var(--brand-color-primary-080);
-}
-
-.c-btn--primary {
-	background-color: var(--brand-button-bg-primary);
-
 	&,
 	&:hover,
 	&:active,
 	&:focus {
-		color: var(--brand-button-text-primary);
 		text-decoration: none;
 	}
 
-	&:hover,
 	&:focus {
-		background-color: var(--brand-button-bg-primary-action);
-		outline-color: var(--brand-button-outline-primary);
+		outline-style: $global-outline-style;
+		outline-width: $global-outline-width;
 	}
 }
 
@@ -49,8 +39,35 @@ $button-ghost-border-width: 3px !default;
 	padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
 }
 
+.c-btn--primary {
+	--background: var(--brand-color-primary-070);
+	--background-action: var(--brand-color-primary-080);
+	--text-color: var(--global-color-white);
+	--outline-color: var(--brand-color-primary-080);
+}
+
+.c-btn--primary {
+	background-color: var(--background);
+
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+		color: var(--text-color);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: var(--background-action);
+	}
+
+	&:focus {
+		outline-color: var(--outline-color);
+	}
+}
+
 /* Ghost buttons
-   ========================================================================== */
+			========================================================================== */
 
 .c-btn--ghost {
 	background: none;
@@ -72,35 +89,38 @@ $button-ghost-border-width: 3px !default;
 }
 
 .c-btn--ghost {
-	&.c-btn--primary {
-		--brand-button-ghost-border-primary: var(--brand-color-primary-070);
-		--brand-button-ghost-border-primary-action: var(--brand-color-primary-080);
-		--brand-button-ghost-text-primary: var(--brand-color-primary-070);
-		--brand-button-ghost-text-primary-action: var(--global-color-white);
-		--brand-button-ghost-bg-primary-action: var(--brand-color-primary-080);
-	}
+	--background-action: var(--brand-color-primary-080);
+	--text-color: var(--brand-color-primary-070);
+	--text-color-action: var(--global-color-white);
+	--outline-color: var(--brand-color-primary-080);
+	--border-color: var(--brand-color-primary-070);
+	--border-color-action: var(--brand-color-primary-080);
 }
 
-[data-theme="dark"] .c-wrapper-primary .c-btn--ghost {
-	&.c-btn--primary {
-		--brand-button-ghost-border-primary: var(--global-color-white);
-		--brand-button-ghost-text-primary: var(--global-color-white);
+.c-btn--ghost {
+	.dark-theme & {
+		--text-color: var(--global-color-white);
+		--border-color: var(--global-color-white);
 	}
 }
 
 .c-btn--ghost {
-	&.c-btn--primary {
-		border-color: var(--brand-button-ghost-border-primary);
-		color: var(--brand-button-ghost-text-primary);
+	border-color: var(--border-color);
+	color: var(--text-color);
 
-		/* stylelint-disable max-nesting-depth */
-		&:hover,
-		&:active,
-		&:focus {
-			background-color: var(--brand-button-ghost-bg-primary-action);
-			border-color: var(--brand-button-ghost-border-primary-action);
-			color: var(--brand-button-ghost-text-primary-action);
-		}
-		/* stylelint-enable max-nesting-depth */
+	&:hover,
+	&:active,
+	&:focus {
+		color: var(--text-color-action);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: var(--background-action);
+		border-color: var(--border-color-action);
+	}
+
+	&:focus {
+		outline-color: var(--outline-color);
 	}
 }

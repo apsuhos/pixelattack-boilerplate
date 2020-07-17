@@ -3,23 +3,25 @@
    =========================================================================== */
 
 body {
-  --brand-surface-primary: var(--global-color-white-offset);
-  --brand-text-primary: var(--brand-color-primary-100);
+	--background-color: var(--global-color-white-offset);
+	--text-color: var(--brand-color-primary-100);
 }
 
-[data-theme="dark"] body {
-  --brand-surface-primary: var(--brand-color-primary-100);
-  --brand-text-primary: var(--global-color-white);
+/* stylelint-disable selector-no-qualifying-type */
+body.dark-theme {
+	--background-color: var(--brand-color-primary-100);
+	--text-color: var(--global-color-white);
 }
+/* stylelint-enable selector-no-qualifying-type */
 
 body {
-  background-color: var(--brand-surface-primary);
-  color: var(--brand-text-primary);
-  font-family: $global-fonts-system;
-  font-size: $inuit-global-font-size;
-  font-style: normal;
-  font-weight: 400;
-  @if $custom-fonts == true {
-    font-family: $global-font-family-primary;
-  }
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: $global-fonts-system;
+	font-size: $inuit-global-font-size;
+	font-style: normal;
+	font-weight: 400;
+	@if $custom-fonts == true {
+		font-family: $global-font-family-primary;
+	}
 }

@@ -3,18 +3,18 @@
    =========================================================================== */
 
 ::selection {
-	--brand-selection-bg-primary: var(--brand-color-primary-100);
-	--brand-selection-text-primary: var(--global-color-white);
+	--background-color: var(--global-color-black-offset);
+	--text-color: var(--global-color-white-offset);
 }
 
-[data-theme="dark"] ::selection {
-	--brand-selection-bg-primary: var(--global-color-white);
-	--brand-selection-text-primary: var(--brand-color-primary-100);
+.dark-theme ::selection {
+	--background-color: var(--global-color-white-offset);
+	--text-color: var(--global-color-black-offset);
 }
 
 ::selection {
-	background: var(--brand-selection-bg-primary);
-	color: var(--brand-selection-text-primary);
+	background: var(--background-color);
+	color: var(--text-color);
 }
 
 @if $custom-fonts == true {
