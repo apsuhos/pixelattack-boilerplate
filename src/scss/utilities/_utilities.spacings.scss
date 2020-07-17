@@ -6,10 +6,10 @@
  * Utility classes to put specific spacing values onto elements. The below loop
  * will generate us a suite of classes like:
  *
- *   .mt {}
- *   .pll {}
- *   .mrs {}
- *   .p {}
+ *   .mt {}		is margin-top
+ *   .pl-l {} is padding-left @ large
+ *   .mr-s {} is margin right @ small
+ *   .p {} 		is padding
  */
 
 $inuit-spacing-properties: (
